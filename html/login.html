@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../jq/jquery-3.4.1.js"></script>
+    <script src="../jq/md5.js"></script>
+    <script src="../jq/login.js"></script>
+</head>
+
+<body>
+    <header id="jx_header">
+        <div class="content clearfix">
+            <div class="fl logo">
+                <a href="">
+                    <img src="../images/logo.png" alt="">
+                </a>
+                <img src="../images/slogan.jpg" alt="">
+            </div>
+            <div class="fr topbox">
+                <span class="welcome">欢迎来到酒仙网！</span>
+                <a href="register.html" class="login">请注册</a>
+                <div class="help_head_nav">
+                    <div class="box_help">
+                        <span class="help">帮助中心</span>
+                        <em class="icon1"></em>
+                    </div>
+                    <div class="help_info">
+                        <ul>
+                            <li>
+                                <a href="" target="_blank">配送说明</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">支付方式</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">售后服务</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">企业客户</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </header>
+    <main id="jx_main">
+        <div class="content">
+            <div class="login_box">
+                <div class="loginCon">
+                    <div class="loginTit clearfix">
+                        <a href="javascript:;" class="userLogin on">帐号登录</a>&nbsp;|&nbsp;
+                        <a href="javascript:;" class="mobileLogin">手机动态密码登录</a>
+                    </div>
+                    <div class="loginType loginUsual">
+                        <div class="frame">
+                            <div class="text_box">
+                                <i class="icon user"></i>
+                                <input type="text" name="username" id="username"></input>
+                                <span class="warn">请输入用户名/邮箱/手机号</span>
+                                <i class="error st"></i>
+                                <p>用户名/邮箱/手机号</p>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="text_box">
+                                <i class="icon pwd"></i>
+                                <input type="text" name="password" id="password"></input>
+                                <span class="warn">请输入密码</span>
+                                <i class="error st"></i>
+                                <p>密码</p>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="text_box">
+                                <i class="icon card"></i>
+                                <input type="text" name="testcard" id="testcard"></input>
+                                <span class="warn">请输入验证码</span>
+                                <i class="error st"></i>
+                                <p>验证码</p>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <button name="login" type="button" id="save" value="登&nbsp;&nbsp;录">登&nbsp;&nbsp;录</button>
+                        </div>
+                    </div>
+                    <div class="loginType loginMobile" style="display: none;">
+                        <div class="frame">
+                            <div class="text_box">
+                                <i class="icon user"></i>
+                                <input type="text" name="name_G" id="name_G">
+                                <span class="warn">请输入手机号</span>
+                                <i class="error st"></i>
+                                <p style="display: block;">手机号</p>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="text_box">
+                                <i class="icon card"></i>
+                                <input type="text" name="card_G" id="card_G">
+                                <span class="warn">请输入验证码</span>
+                                <i class="error st"></i>
+                                <p style="display: block;">验证码</p>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="text_box">
+                                <i class="icon mgsicon"></i>
+                                <input type="text" name="msg_G" id="msg_G"></input>
+                                <div id="getMsg">获取短信验证码</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moreChoice clearfix">
+                        <div class="auto">
+                            <input type="checkbox" class="check" id="auto" name="remember" value="yes">
+                            <label for="auto">自动登录</label>
+                        </div>
+                        <a class="freeReg" href="register.html">免费注册</a>
+                        <a class="forgetPwd" id="foget" href="">忘记密码</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

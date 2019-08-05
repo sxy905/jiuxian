@@ -1,0 +1,153 @@
+* {
+    font-family: "Microsoft YaHei";
+}
+
+.content {
+    width: 1200px;
+    margin: auto;
+    /* background-color: black; */
+}
+
+.jx-header {
+    width: 100%;
+    height: 27px;
+    line-height: 27px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    /* overflow: hidden; */
+}
+
+.jx-header .welcome {
+    font-size: 12px;
+    color: #999999;
+}
+
+.jx-header a {
+    color: #999999;
+}
+
+.jx-header a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+.icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+
+.icont {
+    display: inline-block;
+    width: 7px;
+    height: 3px;
+}
+
+.car {
+    background: url(../images/public-24.png) no-repeat -18px 0px;
+}
+
+.phone {
+    background: url(../images/public-24.png) no-repeat -62px 0px;
+    margin-right: 6px;
+}
+
+.net {
+    background: url(../images/public-24.png) no-repeat -80px 0px;
+    margin-right: 6px;
+}
+.line{
+    border-right: 1px solid #999999;
+}
+.cust {
+    margin-right: 5px;
+    background: url(../images/public-24.png) no-repeat -90px -265px;
+}
+
+.triangle {
+    background: url(../images/public-24.png) no-repeat -100px 0px;
+    margin: 5px 1px 5px 3px;
+}
+
+.jx_top_ul {
+    text-align: center;
+}
+
+.jx_top_ul>li {
+    float: left;
+    position: relative;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.hd-n1 {
+    padding: 0 4px 0 7px;
+}
+
+.hd-n2 {
+    padding: 0 0 0 7px;
+}
+
+.jx_top_ul>li>a {
+    padding: 0px 5px;
+    line-height: 12px;
+}
+
+.my_info {
+    width: 74px;
+    height: 89px;
+    text-align: center;
+    display: none;
+}
+
+.net_leader {
+    width: 207px;
+    height: 320px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 27px;
+    display: none;
+    background-color: #fff;
+}
+
+.net_leader>li {
+    padding: 0px 21px;
+    box-sizing: border-box;
+}
+
+.net_leader h3 {
+    text-align: left;
+    color: #333333;
+    padding-top: 15px;
+}
+
+.hotline {
+    width: 100%;
+    height: 44px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 44px;
+}
+
+.net_leader span {
+    color: #c5c5c5;
+}
+
+.img_phone {
+    position: absolute;
+    left: 0;
+    top: 27px;
+    display: none;
+}
+.text{
+    color: #333333;
+}
+.num{
+    color: #cc0000;
+    font-weight: bold;
+}

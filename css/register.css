@@ -1,0 +1,486 @@
+.content {
+    width: 1000px;
+    margin: auto;
+}
+
+#jx_header {
+    height: 88px;
+}
+
+.logo {
+    height: 63px;
+    margin-top: 10px;
+}
+
+.topbox {
+    /* margin: 48px 0px 0px; */
+}
+
+.welcome {
+    font-size: 12px;
+    color: #999999;
+}
+
+.login {
+    font-size: 12px;
+    color: #0066cc;
+    margin-left: 20px;
+}
+
+.help_head_nav {
+    width: 77px;
+    height: 14px;
+    line-height: 14px;
+    display: inline-block;
+    margin: 48px 0 0 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.box_help {
+    height: 14px;
+}
+
+.help {
+    font-size: 12px;
+    color: #666666;
+    margin-right: 3px;
+    line-height: 14px;
+    vertical-align: middle;
+}
+
+.icon1 {
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    background: url(../images/regLogin-8.png) no-repeat -23px 0;
+    vertical-align: middle;
+}
+
+.help_info {
+    position: absolute;
+    border: 1px solid #ccc;
+    top: -6px;
+    left: -10px;
+    width: 85px;
+    z-index: 1;
+    padding-top: 26px;
+    display: none;
+}
+
+
+.help_info>ul>li {
+    border-top: 1px dotted #ccc;
+    padding-left: 10px;
+    height: 24px;
+    line-height: 24px;
+    background: #fff;
+}
+
+.box {
+    width: 100%;
+    background: url(../images/bg.jpg) repeat-x scroll left top;
+    padding: 70px 0 0px;
+    /* overflow: hidden; */
+    margin-top: 50px;
+}
+
+.reg_content {
+    width: 994px;
+    position: relative;
+    margin: auto;
+    /* height: 510px; */
+    overflow: hidden;
+}
+
+.reg {
+    width: 994px;
+    height: 34px;
+    margin: auto;
+    position: relative;
+}
+
+.reg_type {
+    width: 280px;
+    height: 34px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    line-height: 34px;
+    float: right;
+}
+
+.regist {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 15px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    border-bottom: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #ff9900;
+    margin-left: 6px;
+    vertical-align: top;
+    border-bottom: none;
+}
+
+.on {
+    height: 35px;
+    border: 2px solid #eaeaea;
+    background: #fff;
+    color: #ff9900;
+    margin-bottom: -3px;
+    position: relative;
+    border-bottom: none;
+}
+
+.reg_box {
+    width: 994px;
+    margin: auto;
+    background-color: #fff;
+    border: 3px solid #eaeaea;
+    border-radius: 5px;
+    box-shadow: 1px 6px 11px #e4e4e4;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#reg_form {
+    width: 784px;
+    padding: 55px 0 0 125px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+.lab {
+
+    width: 260px;
+    height: 42px;
+    color: #666666;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 30px;
+    line-height: 42px;
+}
+
+.info {
+    margin-top: 15px;
+}
+
+.text_box {
+    display: inline-block;
+    width: 302px;
+    height: 42px;
+    outline: none;
+    position: relative;
+    border: 1px solid #e5e5e5;
+}
+
+.jx_main {
+    display: none;
+}
+
+.block1 {
+    display: block !important;
+}
+
+.text_box>input,
+.msg_box>input {
+    width: 100%;
+    height: 100%;
+    padding-left: 45px;
+    box-sizing: border-box;
+    line-height: 40px;
+    color: #999;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ph1 {
+    background: url(../images/regLogin-8.png) no-repeat -48px 2px;
+}
+
+.icon {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    left: 12px;
+    top: 9px;
+}
+
+.warn {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    padding: 0 8px;
+    position: absolute;
+    top: 37px;
+    right: 0px;
+    z-index: 5;
+    /* background-color:#ff6666; */
+    display: none;
+}
+
+.card {
+    background: url(../images/regLogin-8.png) no-repeat -422px 2px;
+}
+
+#regCapIcon {
+    display: block;
+    width: 80px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    cursor: pointer;
+}
+
+.mgsicon {
+    background: url(../images/regLogin-8.png) no-repeat -259px 1px;
+}
+
+.msg_box {
+    display: inline-block;
+    width: 148px;
+    height: 42px;
+    position: relative;
+    border: 1px solid #e5e5e5;
+}
+
+#getMsg {
+    width: 148px;
+    height: 42px;
+    display: inline-block;
+    line-height: 42px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.pwd {
+    background: url(../images/regLogin-8.png) no-repeat -77px 2px;
+}
+
+.change {
+    display: inline-block;
+    color: #999;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-bottom: 9px;
+}
+
+.change>a {
+    color: #0066cc;
+}
+
+.check_box {
+    display: inline-block;
+    width: 302px;
+    height: 42px;
+    outline: none;
+    position: relative;
+}
+
+.check_box p {
+    padding-left: 10px;
+    color: #ce1127;
+    display: none;
+}
+
+/* 企业 */
+#ajaxForm {
+    padding: 70px 50px;
+    background: #fff;
+}
+
+.accountInfo {
+    margin-top: 50px;
+    border-bottom: 1px dashed #EAEAEA;
+    margin-bottom: 35px;
+}
+
+.impotFont {
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #333333;
+    margin-right: 35px;
+    font-weight: 600;
+}
+
+.tipFont {
+    color: #FF9800;
+    font-size: 12px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.ln_addressTr {
+    height: 42px;
+    margin-bottom: 15px;
+}
+
+.ln_addressTrTit {
+    font-size: 16px;
+    width: 84px;
+    text-align: right;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    margin-right: 17px;
+}
+
+.firmBox {
+    border: 1px solid #e4e4e4;
+    display: inline-block;
+    width: 380px;
+    position: relative;
+    background: #fff;
+    height: 40px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.firmRegIcon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 10px 10px 0 20px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.iconName {
+    background: url(../images/regLogin-8.png) no-repeat -51px 0px;
+}
+
+.lab1 {
+    width: 88px;
+    height: 42px;
+    color: #666666;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 30px;
+    line-height: 42px;
+}
+
+.firmBox>input {
+    width: 100%;
+    height: 100%;
+}
+
+.commonTip {
+    color: #FF9800;
+    display: inline-block;
+    height: 40px;
+    line-height: 55px;
+    font-size: 24px;
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+.st {
+    background: url(../images/regLogin-8.png) no-repeat -160px 13px;
+}
+
+.rig {
+    background: url(../images/regLogin-8.png) no-repeat -139px 0;
+    margin-top: 12px;
+}
+
+.error {
+    width: 18px;
+    height: 40px;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.errortext {
+    z-index: 4;
+    position: absolute;
+    bottom: -16px;
+    left: 5px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    padding: 0px 12px;
+    background: #ED787F;
+}
+
+.iconemail {
+    background: url(../images/regLogin-8.png) no-repeat -230px 4px;
+}
+
+.name1 {
+    background: url(../images/regLogin-8.png) no-repeat -326px 0px;
+}
+
+.detail {
+    background: url(../images/regLogin-8.png) no-repeat -363px 0px;
+}
+
+#submit,
+#submit1 {
+    width: 305px;
+    height: 42px;
+    background-color: red;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    line-height: 42px;
+}
+
+.drop_text {
+    margin-top: 7px;
+    padding-right: 5px;
+    width: 88px;
+    border: 1px solid #e4e4e4;
+    padding: 4px 5px;
+}
+
+#jx_footer {
+    padding-top: 50px;
+    height: 90px;
+    width: 100%;
+    background-color: rgb(253, 251, 251);
+}
+
+#jx_footer>p {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #333333;
+}
+
+#jx_footer .active {
+    color: #ce1127;
+}
+
+.b_next_no_num {
+    display: block;
+    background-color: #ff6666;
+}
+
+.f__next_no_num {
+    display: block;
+    background-color: #999;
+}
+
+.t_form {
+    border: 1px solid #ff6666;
+}
