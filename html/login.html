@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/login.css">
     <script src="../jq/jquery-3.4.1.js"></script>
+    <script src="../jq/js.cookie.js"></script>
+    <script src="../jq/canvas.js"></script>
     <script src="../jq/md5.js"></script>
     <script src="../jq/login.js"></script>
 </head>
@@ -73,18 +75,19 @@
                         <div class="frame">
                             <div class="text_box">
                                 <i class="icon pwd"></i>
-                                <input type="text" name="password" id="password"></input>
+                                <input type="password" name="password" id="password"></input>
                                 <span class="warn">请输入密码</span>
                                 <i class="error st"></i>
                                 <p>密码</p>
                             </div>
                         </div>
-                        <div class="frame">
+                        <div class="frame card_f">
                             <div class="text_box">
                                 <i class="icon card"></i>
-                                <input type="text" name="testcard" id="testcard"></input>
+                                <input type="text" name="testcard" id="testcard">
                                 <span class="warn">请输入验证码</span>
-                                <i class="error st"></i>
+                                <canvas id="regCapIcon"></canvas>
+                                <!-- <i class="error st"></i> -->
                                 <p>验证码</p>
                             </div>
                         </div>

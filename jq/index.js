@@ -38,5 +38,13 @@ $(function () {
         autoPlay();
     })
 
+    $(".input_box").focus(function () {
+        $(this).parent().find("p").css("display", "none");
+    })
 
+    $(".hover_h").hover(function () {
+        $(".erweima").css("display", "block");
+    }, function () {
+        $(".erweima").css("display", "none");
+    })
 })
