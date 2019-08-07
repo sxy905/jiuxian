@@ -11,6 +11,7 @@ class BannerManager {
         this.index = 0;
         this.sliderBoxStyleLeft = 0;
         this.sliderBoxItemWidth = this.root.offsetWidth;
+        this.sliderBoxItemHeight = this.root.offsetHeight;
 
         this.createHTML()
         this.root.appendChild(this.slider);
@@ -28,7 +29,7 @@ class BannerManager {
         sliderBox.className = "slider-box";
 
         let html = this.data.map((ele) => {
-            return `<li class="slider-box-item " style="width: ${this.sliderBoxItemWidth}px"><img src=${ele}></li>`
+            return `<li class="slider-box-item " style="width: ${this.sliderBoxItemWidth}px;height:${this.sliderBoxItemHeight}px"><img src=${ele}></li>`
         }).join("");
         sliderBox.innerHTML = html;
 
@@ -48,10 +49,11 @@ class BannerManager {
 
 
         let slider = document.createElement("div");
-        slider.className = "slider"
-        slider.appendChild(sliderBox)
+        slider.className = "slider";
+        slider.style.height=this.sliderBoxItemHeight+"px";
+        slider.appendChild(sliderBox);
         // slider.appendChild(sliderControl)
-        slider.appendChild(sliderNav)
+        slider.appendChild(sliderNav);
 
         this.slider = slider;
         this.sliderBox = sliderBox;

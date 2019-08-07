@@ -7,7 +7,7 @@ body {
 
 .slider {
     width: 100%;
-    height: 470px;
+    /* height: 470px; */
     overflow: hidden;
     position: relative;
 }
@@ -15,7 +15,7 @@ body {
 .slider-box {
     background: #dddddd;
     width: 1000%;
-    height: 470px;
+    /* height: 470px; */
     padding: 0;
     margin: 0;
     position: absolute;
@@ -24,7 +24,7 @@ body {
 
 .slider-box-item {
     width: 100%;
-    height: 470px;
+    height: 100%;
     float: left;
     font-size: 40px;
     text-align: center;

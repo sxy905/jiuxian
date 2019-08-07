@@ -1,14 +1,5 @@
 $(function () {
-    //发送网络请求获取数据
-    $.ajax({
-        type: "post",
-        url: "../service/getData.php",
-        dataType: "json",
-        success: function (response) {
-            console.log(response);
-            new jx(response).init();
-        }
-    });
+    
     $(".slide").hover(function () {
         $(this).children(".slide_box").css("display", "block");
         $(this).children(".slide_box").css("z-index", "100");
@@ -34,6 +25,7 @@ $(function () {
             clearInterval(timer);
         })
     }
+    document.getElementsByTagName
     $(".nav_content").mouseleave(function () {
         autoPlay();
     })
