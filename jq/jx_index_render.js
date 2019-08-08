@@ -30,14 +30,17 @@ class Jx_index {
         this.jx_F3_menu = this.data.jx_F3_menu;
         this.jx_F4_menu = this.data.jx_F4_menu;
         this.jx_F5_menu = this.data.jx_F5_menu;
-        this.jx_titie_recom = this.data.jx_titie_recom;
+        this.jx_logo_recom = this.data.jx_logo_recom;
         this.jx_logo_box = this.data.jx_logo_box;
         this.jx_store_text = this.data.jx_store_text;
-        this.jx_F1_info = jx_F1_info;
-        this.jx_F2_info = jx_F2_info;
-        // this.jx_F5_menu=jx_F5_menu;
-        // this.jx_titie_recom=jx_titie_recom;
-
+        this.jx_F1_info = this.data.jx_F1_info;
+        this.jx_F2_info = this.data.jx_F2_info;
+        this.jx_F3_info = this.data.jx_F3_info;
+        this.jx_F1_tab_menu = this.data.jx_F1_tab_menu;
+        this.jx_F2_tab_menu = this.data.jx_F2_tab_menu;
+        this.jx_floor = this.data.jx_floor;
+        this.jx_floor_text = this.data.jx_floor_text;
+        this.jx_adv_img = this.data.jx_adv_img;
     }
     init() {
         this.renderUI();
@@ -66,9 +69,9 @@ class Jx_index {
     //     $(".nav_content_box").html(html);
     // }
     renderTab_act() {
-        new BannerManager(Array.from(this.jx_banner_r1), document.getElementsByClassName("banners1")[0]).init();
+        new BannerManager(Array.from(this.jx_banner_r1), document.getElementsByClassName("banners1")[0], 10, false).init();
 
-        new BannerManager(Array.from(this.jx_banner_r2), document.getElementsByClassName("banners2")[0]).init();
+        new BannerManager(Array.from(this.jx_banner_r2), document.getElementsByClassName("banners2")[0], 10, false).init();
         $(".ul_title").on("mouseenter", "li", function () {
             let index = $(this).index();
             // $(this).addClass("tab_hover").siblings().removeClass("tab_hover");
@@ -195,26 +198,29 @@ class Jx_index {
             }
         })
     }
-
-    renderF1() {
-        let title = Array.from(this.jx_F1_menu).map((ele_title) => {
+    //菜单  box  menu_item
+    renderF1_F2(menu_title, f_box, left_info, f_menu_item, f_tab, classname = "", floor = "1F", floor_text = "白酒馆") {
+        let title = Array.from(menu_title).map((ele_title) => {
             return `<a href="" class="line">${ele_title}</a>`;
-        })
+        }).join("");
         title = `<div class="f_info">
-                    <i class="ff f_1">1F</i>
-                    <span>白酒馆<span />
+                    <i class="ff f_1">${floor}</i>
+                    <span>${floor_text}<span />
                         <div class="f1_right fr">
                             ${title}
                         </div>
                 </div>`
-        let F1_box = Array.from(this.jx_F1_box).map((elel_box) => {
+        let F1_box = Array.from(f_box).map((elel_box) => {
             return `<div class="slider_right_box fl">
-                        <img src="${elel_box.src}" alt="">
-                        <div>
-                            <i class="icon_img"></i>
+                        <div class="F1_img_box">
+                            <img src="${elel_box.src}" alt="">
+                        </div>
+                        <div class="F1_box_title"> 
                             <a>${elel_box.des}</a>
                         </div>
-                        <span>${elel_box.price}</span>
+                        <div class="F1_box_price">
+                            <span>${elel_box.price}</span>
+                        </div>
                     </div>`;
         }).join("");
         F1_box = `<div class="slider_1_right fr">${F1_box}</div>`;
@@ -225,23 +231,354 @@ class Jx_index {
                             ${F1_box}
                     </div>`
 
-        let left_type = Array.from(this.jx_F1_info).map((ele_info) => {
-            let left_info = Array.from(ele_info).map((ele_detail) => {
-                let info_p=ele_detail.info;
-                let p_s=Array.from(info_p).map((ele_p)=>{
-                    return `<span><a href="">${ele_p}</a></span>`;
-                }).join("");
-                ps=`<p>${p_s}</p>`;
-                return `<div class="detail_recom">
-                            <span>${ele_detail.type}</span>
-                            ${ps}
+        let left_type = Array.from(left_info).map((ele_info) => {
+            let info_p = ele_info.info;
+            let p_span = Array.from(info_p).map((ele_p) => {
+                return `<span><a href="">${ele_p}</a></span>`;
+            }).join("");
+            let p_box = `<p>${p_span}</p>`;
+            return `<div class="detail_recom">
+                            <span>${ele_info.type}</span>
+                            ${p_box}
+                    </div>`;
+        }).join("");
+        left_type = `<div class="f1_detail fl">${left_type}</div>`;
+        let tab_menu = Array.from(f_menu_item).map((ele_tab_menu) => {
+            return `<a href="">${ele_tab_menu}</a>`;
+        }).join("");
+
+        let box_menu = Array.from(f_tab).map((ele_tab) => {
+            let menu_item = Array.from(ele_tab).map((ele_item) => {
+                return `<div class="hot_box_s">
+                            <div class="hot_box_left fl">
+                                <img src="${ele_item.src}" alt="">
+                            </div>
+                            <div class="hot_box_right fr">
+                                <span>${ele_item.des}</span>
+                                <span class="price">${ele_item.price}</span>
+                            </div>
                         </div>`;
-            })
+            }).join("");
+            return `<div class="hot_box clearfix">${menu_item}</div>`;
+        }).join("");
+        box_menu = `<div class="hot_img">${box_menu}</div>`;
+
+        let bottom = `${left_type}<div class="f1_detail_img fr">
+                        <div class="hot">
+                            <p style="display: inline-block">
+                                <i class="icon_hot hot1"></i>
+                                <span class="hot_text1">本周热销排行榜</span>
+                            </p>
+                            <div class="hot_type fr">
+                                ${tab_menu}
+                            </div>
+                        </div>
+                        ${box_menu}
+                    </div>
+                    </div>`;
+        let F1 = $(`<div class="${classname}"></div>`);
+        F1.html(`${top}${bottom}`);
+        $("main").append(F1);
+    }
+
+    renderF1_F2_act(floor_className, arr_banner, location_dom, point_size, num_t_f) {
+        $(floor_className).find(".hot_type").children("a").eq(0).addClass("on");
+        $(floor_className).find(".hot_type").on("mouseenter", "a", function () {
+            let index = $(this).index();
+            $(this).addClass("on").siblings().removeClass("on");
+            $(floor_className).find(".hot_img").children(".hot_box").eq(index).css("display", "block").siblings().css("display", "none");
+        });
+        new BannerManager(arr_banner, location_dom, point_size, num_t_f).init();
+    }
+
+    renderF3(menu_title, f_box, left_info, classname = "", floor = "1F", floor_text = "白酒馆") {
+        let title = Array.from(menu_title).map((ele_title) => {
+            return `<a href="" class="line">${ele_title}</a>`;
+        }).join("");
+        title = `<div class="f_info">
+                    <i class="ff f_1">${floor}</i>
+                    <span>${floor_text}<span />
+                        <div class="f1_right fr">
+                            ${title}
+                        </div>
+                </div>`
+        let F1_box = Array.from(f_box).map((elel_box) => {
+            return `<div class="slider_right_box fl">
+                        <div class="F1_img_box">
+                            <img src="${elel_box.src}" alt="">
+                        </div>
+                        <div class="F1_box_title"> 
+                            <a>${elel_box.des}</a>
+                        </div>
+                        <div class="F1_box_price">
+                            <span>${elel_box.price}</span>
+                        </div>
+                    </div>`;
+        }).join("");
+        F1_box = `<div class="slider_1_right fr">${F1_box}</div>`;
+        let left_type = Array.from(left_info).map((ele_info) => {
+            let info_p = ele_info.info;
+            let p_span = Array.from(info_p).map((ele_p) => {
+                return `<span><a href="">${ele_p}</a></span>`;
+            }).join("");
+            let p_box = `<p>${p_span}</p>`;
+            return `<div class="detail_recom">
+                            <span>${ele_info.type}</span>
+                            ${p_box}
+                    </div>`;
+        }).join("");
+        left_type = `<div class="f1_detail fl">${left_type}</div>`;
+        let top = `<div class="content">
+                    ${title}
+                    <div class="left_F3">
+                        <div class="f_img">
+                            <div class="slider_1 fl"></div>    
+                        </div>
+                        ${left_type}
+                    </div>
+                    ${F1_box}`
+
+        let F1 = $(`<div class="${classname}"></div>`);
+        F1.html(`${top}`);
+        $("main").append(F1);
+    }
+    renderF4_F5(menu_title, f_box, classname = "", floor = "1F", floor_text = "白酒馆") {
+        let title = Array.from(menu_title).map((ele_title) => {
+            return `<a href="" class="line">${ele_title}</a>`;
+        }).join("");
+        title = `<div class="f_info">
+                    <i class="ff f_1">${floor}</i>
+                    <span>${floor_text}<span />
+                        <div class="f1_right fr">
+                            ${title}
+                        </div>
+                </div>`
+        let F1_box = Array.from(f_box).map((elel_box) => {
+            return `<div class="slider_right_box fl">
+                        <div class="F1_img_box">
+                            <img src="${elel_box.src}" alt="">
+                        </div>
+                        <div class="F1_box_title"> 
+                            <a>${elel_box.des}</a>
+                        </div>
+                        <div class="F1_box_price">
+                            <span>${elel_box.price}</span>
+                        </div>
+                    </div>`;
+        }).join("");
+        F1_box = `<div class="slider_1_right fr">${F1_box}</div>`;
+        let top = `<div class="content">
+                    ${title}
+                    <div class="f_img">
+                        <div class="slider_1 fl"></div>
+                            ${F1_box}
+                    </div>`
+
+        let F1 = $(`<div class="${classname}"></div>`);
+        F1.html(`${top}`);
+        $("main").append(F1);
+    }
+
+    renderF3_F5_act(floor_className, arr_banner, location_dom, point_size, num_t_f) {
+        // $(floor_className).find(".hot_type").children("a").eq(0).addClass("on");
+        // $(floor_className).find(".hot_type").on("mouseenter", "a", function () {
+        //     let index = $(this).index();
+        //     $(this).addClass("on").siblings().removeClass("on");
+        //     $(floor_className).find(".hot_img").children(".hot_box").eq(index).css("display", "block").siblings().css("display", "none");
+        // });
+        new BannerManager(arr_banner, location_dom, point_size, num_t_f).init();
+    }
+    renderlogo() {
+        let lis = Array.from(this.jx_logo_recom).map((ele_lis) => {
+            return `<li>${ele_lis}</li>`;
+        }).join("");
+
+        let box = Array.from(this.jx_logo_box).map((ele_box) => {
+            let index = 0;
+            let item_box = Array.from(ele_box).map((ele_item) => {
+                if (Array.isArray(ele_item)) {
+                    let inner = Array.from(ele_item).map((inner_item) => {
+                        return `<li class="lis"><img src="${inner_item}" alt=""></li>`;
+                    }).join("");
+                    inner = `<div class="logo_index clearfix">${inner}</div>`;
+                    return inner;
+                } else {
+                    let item = `<li class="lis"><img src="${ele_item}" alt=""></li>`;
+                    return item;
+                }
+            }).join("");
+            item_box = `<div class="logo_item">${item_box}</div>`;
+            return item_box;
+        }).join("");
+        box = `<div class="logo_box">${box}</div>`;
+        let html = `<div class="content">
+                    <div class="logo_top clearfix">
+                        <ul class="logo_ul clearfix">
+                            ${lis}
+                        </ul>
+                        <div class="titleSlider"><b></b></div>
+                    </div>
+                    ${box}
+                </div>`;
+
+        let F1 = $(`<div class="logo-box"></div>`);
+        F1.html(`${html}`);
+        $("main").append(F1);
+    }
+
+    renderlogo_act() {
+        $(".logo_index").children("li").children("img").hover(function () {
+            $(this).stop().animate({
+                marginLeft: '-100px'
+            }, "normal");
+
+        }, function () {
+            $(this).stop().animate({
+                marginLeft: '0'
+            }, "normal");
+        })
+
+        $(".logo_ul").on("mouseenter", "li", function () {
+            let index = $(this).index();
+            $(this).addClass("on").siblings().removeClass("on");
+            $(".titleSlider").css("left", (index * 105) + "px");
+            $(".logo_box").children(".logo_item").eq(index).css("display", "block").siblings().css("display", "none");
         })
     }
-    renderF1_act() {
+
+    renderstore() {
+        let dl_text = Array.from(this.jx_store_text).map((ele) => {
+            let store_a = ele.des;
+            let a_s = Array.from(store_a).map((ele_a) => {
+                return `<a href="" class="dd_a">${ele_a}</a>`;
+            }).join("");
+            return `<dt class="store_dt">
+                        <img src="${ele.src}" alt="">
+                    </dt>
+                    <dd class="store_dd">
+                        <p>
+                            ${a_s}
+                        </p>
+                    </dd>`;
+        }).join("");
+        let html = `<div class="content">
+                    <div class="store_title">
+                        <i></i>
+                    <span>品牌精品店</span>
+                    </div>
+                    ${dl_text}
+                </div>`;
+        let F1 = $(`<div class="store_box"></div>`);
+        F1.html(`${html}`);
+        $("main").append(F1);
 
     }
+    renderadv() {
+        let html = `<div class="jx_adv_img">
+                        <div class="content">
+                            <div class="adv_img_box" style="background: url(${this.jx_adv_img}) center top no-repeat scroll;"></div>
+                            <span class="clear">x</span>
+                        </div>
+                    </div>`;
+        let F1 = $(`<div class="jx_adv_box"></div>`);
+        F1.html(`${html}`);
+        $("main").append(F1);
+    }
+    // renderF1() {
+    //     let title = Array.from(this.jx_F1_menu).map((ele_title) => {
+    //         return `<a href="" class="line">${ele_title}</a>`;
+    //     }).join("");
+    //     title = `<div class="f_info">
+    //                 <i class="ff f_1">1F</i>
+    //                 <span>白酒馆<span />
+    //                     <div class="f1_right fr">
+    //                         ${title}
+    //                     </div>
+    //             </div>`
+    //     let F1_box = Array.from(this.jx_F1_box).map((elel_box) => {
+    //         return `<div class="slider_right_box fl">
+    //                     <div class="F1_img_box">
+    //                         <img src="${elel_box.src}" alt="">
+    //                     </div>
+    //                     <div class="F1_box_title"> 
+    //                         <a>${elel_box.des}</a>
+    //                     </div>
+    //                     <div class="F1_box_price">
+    //                         <span>${elel_box.price}</span>
+    //                     </div>
+    //                 </div>`;
+    //     }).join("");
+    //     F1_box = `<div class="slider_1_right fr">${F1_box}</div>`;
+    //     let top = `<div class="content">
+    //                 ${title}
+    //                 <div class="f_img">
+    //                     <div class="slider_1 fl"></div>
+    //                         ${F1_box}
+    //                 </div>`
+
+
+    //     let left_type = Array.from(this.jx_F1_info).map((ele_info) => {
+    //         let info_p = ele_info.info;
+    //         let p_span = Array.from(info_p).map((ele_p) => {
+    //             return `<span><a href="">${ele_p}</a></span>`;
+    //         }).join("");
+    //         let p_box = `<p>${p_span}</p>`;
+    //         return `<div class="detail_recom">
+    //                         <span>${ele_info.type}</span>
+    //                         ${p_box}
+    //                 </div>`;
+    //     }).join("");
+    //     console.log(`<div class="f1_detail fl">${left_type}</div>`);
+    //     left_type = `<div class="f1_detail fl">${left_type}</div>`;
+
+    //     let tab_menu = Array.from(this.jx_F1_tab_menu).map((ele_tab_menu) => {
+    //         return `<a href="">${ele_tab_menu}</a>`;
+    //     }).join("");
+
+    //     let box_menu = Array.from(this.jx_F1_tab).map((ele_tab) => {
+    //         let menu_item = Array.from(ele_tab).map((ele_item) => {
+    //             return `<div class="hot_box_s">
+    //                         <div class="hot_box_left fl">
+    //                             <img src="${ele_item.src}" alt="">
+    //                         </div>
+    //                         <div class="hot_box_right fr">
+    //                             <span>${ele_item.des}</span>
+    //                             <span class="price">${ele_item.price}</span>
+    //                         </div>
+    //                     </div>`;
+    //         }).join("");
+    //         return `<div class="hot_box clearfix">${menu_item}</div>`;
+    //     }).join("");
+    //     box_menu = `<div class="hot_img">${box_menu}</div>`;
+
+    //     let bottom = `${left_type}<div class="f1_detail_img fr">
+    //                     <div class="hot">
+    //                         <p style="display: inline-block">
+    //                             <i class="icon_hot hot1"></i>
+    //                             <span class="hot_text1">本周热销排行榜</span>
+    //                         </p>
+    //                         <div class="hot_type fr">
+    //                             ${tab_menu}
+    //                         </div>
+    //                     </div>
+    //                     ${box_menu}
+    //                 </div>
+    //                 </div>`;
+    //     let F1 = $('<div class="f1"></div>');
+    //     F1.html(`${top}${bottom}`);
+    //     $("main").append(F1);
+    // }
+
+    // renderF1_act() {
+    //     $(".hot_type").children("a").eq(0).addClass("on");
+    //     $(".hot_type").on("mouseenter", "a", function () {
+    //         let index = $(this).index();
+    //         $(this).addClass("on").siblings().removeClass("on");
+    //         $(".hot_img").children(".hot_box").eq(index).css("display", "block").siblings().css("display", "none");
+    //     });
+    //     new BannerManager(Array.from(this.jx_banner_F1), document.getElementsByClassName("slider_1")[0], 10, false).init();
+    // }
+
     renderUI() {
         // this.renderBanner();
         this.renderTab();
@@ -249,8 +586,23 @@ class Jx_index {
         this.renderlayerimg();
         this.renderrecom();
         this.renderrecom_act();
-        this.renderF1();
-        this.renderF1_act();
+
+        this.renderF1_F2(this.jx_F1_menu, this.jx_F1_box, this.jx_F1_info, this.jx_F1_tab_menu, this.jx_F1_tab, "f1", this.jx_floor[0], this.jx_floor_text[0]);
+        this.renderF1_F2_act(".f1", Array.from(this.jx_banner_F1), document.getElementsByClassName("slider_1")[0], 10, false);
+
+        this.renderF1_F2(this.jx_F2_menu, this.jx_F2_box, this.jx_F2_info, this.jx_F2_tab_menu, this.jx_F2_tab, "f2", this.jx_floor[1], this.jx_floor_text[1]);
+        this.renderF1_F2_act(".f2", Array.from(this.jx_banner_F2), document.getElementsByClassName("slider_1")[1], 10, false);
+
+        this.renderF3(this.jx_F3_menu, this.jx_F3_box, this.jx_F3_info, "f3", this.jx_floor[2], this.jx_floor_text[2])
+        this.renderF4_F5(this.jx_F4_menu, this.jx_F4_box, "f4", this.jx_floor[3], this.jx_floor_text[3])
+        this.renderF4_F5(this.jx_F5_menu, this.jx_F5_box, "f5", this.jx_floor[4], this.jx_floor_text[4])
+        this.renderF3_F5_act("", Array.from(this.jx_banner_F3), document.getElementsByClassName("slider_1")[2], 10, false);
+        this.renderF3_F5_act("", Array.from(this.jx_banner_F3), document.getElementsByClassName("slider_1")[3], 10, false);
+        this.renderF3_F5_act("", Array.from(this.jx_banner_F3), document.getElementsByClassName("slider_1")[4], 10, false);
+        this.renderlogo();
+        this.renderlogo_act();
+        this.renderstore();
+        this.renderadv();
     }
     start() {
         this.init();

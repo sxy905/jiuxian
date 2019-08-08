@@ -3,42 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰店</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/foot.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/detail.css">
     <script src="../jq/jquery-3.4.1.js"></script>
-    <!-- <script src="../jq/index.js"></script> -->
-    <script src="../jq/banner.js"></script>
     <script src="../jq/include.js"></script>
     <script src="../jq/index.js"></script>
-    <script src="../jq/jx_index_render.js"></script>
+    <script src="../jq/jx_detail.js"></script>
 </head>
 
 <body>
     <div id="header">
         <include src="jx_header.html"></include>
     </div>
-    <main>
-        <div class="nav_content">
+    <div id="main">
+        <div class="content">
+
         </div>
-    </main>
+    </div>
     <div id="footer">
         <include src="jx_footer.html"></include>
     </div>
-    <script>
-        $(function () {
-            $.getJSON("../service/Data_get.php", function (json){    
-                let data=JSON.parse(json)
-                new Jx_index(data).start();
-            })
-
-        })
-    </script>
 </body>
+
 </html>

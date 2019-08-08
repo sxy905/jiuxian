@@ -1,10 +1,12 @@
 class BannerManager {
-    constructor(data, root = document.body) {
+    constructor(data, root = document.body, dot = 20, flag = true) {
         this.data = data;
         this.sliderBox = null;
         this.sliderNav = null;
         this.slider = null;
         this.root = root;
+        this.dot = dot;
+        this.flag = flag;
     }
     init() {
         /* 初始化数据 */
@@ -39,18 +41,20 @@ class BannerManager {
         //      <span class="prev">&lt;</span>
         //      <span class="next">&gt;</span>
         // `
+        
         let sliderNav = document.createElement("ol");
         sliderNav.className = "slider-nav";
-
+        sliderNav.style.height = this.dot + "px";
         let html2 = this.data.map((ele, index) => {
-            return `<li class="slider-nav-item">${index + 1}</li>`
+            let nun = this.flag == true ? index + 1 : "";
+            return `<li class="slider-nav-item" style="width: ${this.dot}px;height:${this.dot}px;line-height: ${this.dot}px">${nun}</li>`
         }).join("");
         sliderNav.innerHTML = html2;
 
 
         let slider = document.createElement("div");
         slider.className = "slider";
-        slider.style.height=this.sliderBoxItemHeight+"px";
+        slider.style.height = this.sliderBoxItemHeight + "px";
         slider.appendChild(sliderBox);
         // slider.appendChild(sliderControl)
         slider.appendChild(sliderNav);

@@ -1,0 +1,183 @@
+.line_img {
+    height: 70px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.ine_img>img{
+    height: 7px;
+    width: 100%;
+}
+.dIntro {
+    border: 1px solid #f2f2f2;
+}
+
+.introShow {
+    width: 440px;
+    float: left;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 18px;
+}
+
+.introInfo {
+    width: 548px;
+    min-height: 533px;
+    padding: 20px 0 10px 10px;
+    border-right: 0;
+    float: left;
+    width: 607px;
+    min-height: 482px;
+    padding: 0 10px;
+    border-right: 1px solid #ededed;
+    position: relative;
+    z-index: 1;
+}
+.introOther {
+    float: left;
+    width: 200px;
+}
+
+.show-pic {
+    width: 420px;
+    height: 420px;
+    border: 0;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+    font-size: 0;
+}
+
+.show-list {
+    height: 64px;
+    padding-top: 5px;
+}
+
+.showOther {
+    padding: 22px 20px 0;
+    height: 20px;
+    line-height: 20px;
+}
+.show-list-prev {
+    padding-left: 14px;
+}
+.show-list-prev, .show-list-next {
+    height: 64px;
+}
+.show-list-prev {
+    float: left;
+}
+.show-list-prev, .show-list-next {
+    display: block;
+    width: 14px;
+    height: 62px;
+    text-align: center;
+}
+
+.show-list-next {
+    padding-right: 14px;
+}
+
+.show-list-next {
+    float: right;
+}
+
+.show-list-prev i {
+    background: url(../images/d-icon.png) no-repeat -177px -20px;
+}
+
+.show-list-next i {
+    background: url(../images/d-icon.png) no-repeat -193px -20px;
+}
+.show-list-prev i, .show-list-next i {
+    display: inline-block;
+    width: 13px;
+    height: 30px;
+    margin-top: 17px;
+}
+.show-list-con ul {
+    width: 1000px;
+}
+
+.show-list-con li {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 0;
+    margin: 0 6px;
+    border: 2px solid #fff;
+}
+.show-list-con li a {
+    display: inline-block;
+    padding: 3px;
+}
+.show-list-con li a>img{
+    width: 54px;
+    height: 54px;
+}
+.show-list-con li.on {
+    border: 2px solid #c33;
+}
+
+.showOther .goodsNo {
+    float: left;
+}
+
+.showOther .sOtherRight {
+    float: right;
+}
+.showOther .goodsNo span {
+    font-family: "Microsoft YaHei";
+}
+.showCollect {
+    float: right;
+}
+.showCollect a {
+    display: inline-block;
+    text-decoration: none;
+    color: #666;
+}
+
+.showCollect i {
+    background-position: -148px -14px;
+}
+
+.showCollect i {
+    width: 13px;
+    height: 12px;
+    /* background-position: -148px 0; */
+    margin: 4px 4px 0 0;
+    overflow: hidden;
+}
+.showShare i, .showShare span, .showCollect i, .showCollect span {
+    display: inline-block;
+}
+.dIntro em, .dIntro i {
+    font-style: normal;
+}
+
+.introOther {
+    float: left;
+    width: 200px;
+}
+.showShare {
+    float: right;
+    margin-right: 15px;
+    position: relative;
+}
+
+.showShare i {
+    width: 15px;
+    height: 15px;
+    background-position: -125px -1px;
+    margin: 2px 5px 0 0;
+}
+
+.dIntro em, .dIntro i {
+    font-style: normal;
+}
+.dIcon {
+    background: url(../images/d-icon.png) no-repeat 0 0;
+}
