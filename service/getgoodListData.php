@@ -2,7 +2,7 @@
      header("Content-Type: text/html;charset=utf-8"); 
      $conn=new mysqli("127.0.0.1","root","","jiuxian");
 
-     $sql_a="SELECT * FROM t_jx_goodlist";
+     $sql_a="SELECT * FROM t_jx_goodlist WHERE type='giu_b' OR type='giu_d' OR type='giu_t'";
      $result_a=mysqli_query($conn,$sql_a);
      $data_a=mysqli_fetch_all($result_a,MYSQLI_ASSOC);  //数组
 

@@ -1,10 +1,16 @@
 .layoutBox,
 .userBox {
     margin-bottom: 10px;
-    width: 1920px;
-    margin-left: -285.5px;
+    width: 100%;
+    /* margin-left: -285.5px; */
 }
-
+.layoutBox>img,
+.userBox>img{
+    width: 100%;
+}
+.good_baokuan,.good_dapai,.good_tunhuo{
+    width: 100%;
+}
 .good_content {
     width: 990px;
     margin: auto;

@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <title>酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰店</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/banner.css">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../css/foot.css">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../jq/jquery-3.4.1.js"></script>
-    <!-- <script src="../jq/index.js"></script> -->
     <script src="../jq/banner.js"></script>
     <script src="../jq/include.js"></script>
     <script src="../jq/index.js"></script>
@@ -33,12 +32,26 @@
     </div>
     <script>
         $(function () {
-            $.getJSON("../service/Data_get.php", function (json){    
-                let data=JSON.parse(json)
+            let itemDate;
+            $.getJSON("../service/Data_get.php", function (json) {
+                let data = JSON.parse(json)
                 new Jx_index(data).start();
             })
 
+            $.ajax({
+                type: "get",
+                url: "../service/getAdv.php",
+                dataType: "json",
+                success: function (data) {                   
+                    itemDate=data.data_banner_1;
+                    console.log(Array.isArray(itemDate));
+                    
+                    let jx_banner_1=JSON.parse(data.data_banner_1[0].contents);  
+                    new BannerManager(jx_banner_1, document.getElementsByClassName("nav_content")[0], 20, true).init();
+                }
+            })
         })
     </script>
 </body>
+
 </html>

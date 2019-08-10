@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰店</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/foot.css">
@@ -44,7 +45,7 @@
             <div class="good_content">
             </div>
         </div>
-        <div class="userBox">
+        <div class="userBox up">
             <img alt="" src="http://img09.jiuxian.com/brandlogo/2018/0525/3186baeb63734674a4fadc84f196787f.jpg">
         </div>
     </main>
@@ -53,7 +54,7 @@
     </div>
     <script>
         $(function () {
-            let itemData=[];
+            let itemData = [];
             let good_baokuan = $(".good_baokuan").children(".good_content");
             let good_dapai = $(".good_dapai").children(".good_content");
             let good_tunhuo = $(".good_tunhuo").children(".good_content");
@@ -62,7 +63,7 @@
                 url: "../service/getgoodListData.php",
                 dataType: "json",
                 success: function (data) {
-                    itemData=data.data_a;                  
+                    itemData = data.data_a;
                     let res_b = data.data_b.map((ele, index) => {
                         return `${index % 4 == 0 ? '<ul class="clearfix">': ""}
                                     <li class="good_item">
@@ -132,12 +133,19 @@
             })
 
             $("main").on("click", ".sBayBut", function () {
-
                 let li = $(this).parents('.good_item');
                 let index = $('.good_item').index(li);
                 let queryStr = obj2QueryString(itemData[index]);
                 let str = "jx_detail.html?" + queryStr;
                 window.location.href = str;
+            })
+
+            // 回到顶部。
+            $(".up").click(function () {
+                $('html ,body').animate({
+                    scrollTop: 0
+                }, 100);
+                return false;
             })
 
             function obj2QueryString(o) {

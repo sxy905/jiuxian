@@ -340,14 +340,18 @@ strong {
 .cart-gopay-left .checkbox-checked i {
     background-position: -17px -58px;
 }
+
 .cart-gopay-left label {
     font-size: 0;
     margin-right: 30px;
 }
-.cart-gopay-left label, .cart-gopay-left a {
+
+.cart-gopay-left label,
+.cart-gopay-left a {
     float: left;
     line-height: 60px;
 }
+
 .cart-gopay-left label i {
     width: 15px;
     height: 15px;
@@ -673,16 +677,22 @@ select {
     font-family: "微软雅黑";
 }
 
-.goods-num i.min {
-    background-position: -15px -74px;
-    border-right: 1px solid #d0d0d0;
-    cursor: not-allowed;
+.goods-num p i {
+    display: block;
+    width: 17px;
+    height: 20px;
 }
 
 .goods-num i.cut {
     background-position: -15px -94px;
     border-right: 1px solid #d0d0d0;
     cursor: pointer;
+}
+
+.goods-num i.min {
+    background-position: -15px -74px;
+    border-right: 1px solid #d0d0d0;
+    cursor: not-allowed;
 }
 
 .goods-num p i {
