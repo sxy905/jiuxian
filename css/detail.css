@@ -3,12 +3,15 @@
     overflow: hidden;
     padding-top: 10px;
 }
-.ine_img>img{
+
+.ine_img>img {
     height: 7px;
     width: 100%;
 }
+
 .dIntro {
     border: 1px solid #f2f2f2;
+    height: 572px;
 }
 
 .introShow {
@@ -25,13 +28,11 @@
     padding: 20px 0 10px 10px;
     border-right: 0;
     float: left;
-    width: 607px;
-    min-height: 482px;
-    padding: 0 10px;
     border-right: 1px solid #ededed;
     position: relative;
     z-index: 1;
 }
+
 .introOther {
     float: left;
     width: 200px;
@@ -48,6 +49,11 @@
     font-size: 0;
 }
 
+.show-pic>img {
+    width: 100%;
+    height: auto;
+}
+
 .show-list {
     height: 64px;
     padding-top: 5px;
@@ -58,16 +64,22 @@
     height: 20px;
     line-height: 20px;
 }
+
 .show-list-prev {
     padding-left: 14px;
 }
-.show-list-prev, .show-list-next {
+
+.show-list-prev,
+.show-list-next {
     height: 64px;
 }
+
 .show-list-prev {
     float: left;
 }
-.show-list-prev, .show-list-next {
+
+.show-list-prev,
+.show-list-next {
     display: block;
     width: 14px;
     height: 62px;
@@ -89,12 +101,23 @@
 .show-list-next i {
     background: url(../images/d-icon.png) no-repeat -193px -20px;
 }
-.show-list-prev i, .show-list-next i {
+
+.show-list-prev i,
+.show-list-next i {
     display: inline-block;
     width: 13px;
     height: 30px;
     margin-top: 17px;
 }
+
+.show-list-con {
+    width: 380px;
+    height: 64px;
+    margin: 0 2px;
+    float: left;
+    overflow: hidden;
+}
+
 .show-list-con ul {
     width: 1000px;
 }
@@ -109,14 +132,17 @@
     margin: 0 6px;
     border: 2px solid #fff;
 }
+
 .show-list-con li a {
     display: inline-block;
     padding: 3px;
 }
-.show-list-con li a>img{
+
+.show-list-con li a>img {
     width: 54px;
     height: 54px;
 }
+
 .show-list-con li.on {
     border: 2px solid #c33;
 }
@@ -128,12 +154,15 @@
 .showOther .sOtherRight {
     float: right;
 }
+
 .showOther .goodsNo span {
     font-family: "Microsoft YaHei";
 }
+
 .showCollect {
     float: right;
 }
+
 .showCollect a {
     display: inline-block;
     text-decoration: none;
@@ -151,10 +180,16 @@
     margin: 4px 4px 0 0;
     overflow: hidden;
 }
-.showShare i, .showShare span, .showCollect i, .showCollect span {
+
+.showShare i,
+.showShare span,
+.showCollect i,
+.showCollect span {
     display: inline-block;
 }
-.dIntro em, .dIntro i {
+
+.dIntro em,
+.dIntro i {
     font-style: normal;
 }
 
@@ -162,6 +197,7 @@
     float: left;
     width: 200px;
 }
+
 .showShare {
     float: right;
     margin-right: 15px;
@@ -175,9 +211,754 @@
     margin: 2px 5px 0 0;
 }
 
-.dIntro em, .dIntro i {
+.dIntro em,
+.dIntro i {
     font-style: normal;
 }
+
+.introInfo .comName {
+    padding: 0 10px 5px;
+}
+
+.introInfo .comName h1 {
+    width: 528px;
+    font-size: 16px;
+    min-height: 20px;
+    line-height: 20px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+}
+
+.introInfo .comName p {
+    width: 528px;
+    color: #c33;
+    min-height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    padding: 8px 0 3px;
+}
+
+.introInfo .comSummary {
+    background: #fafafa;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.introInfo .infoWrap {
+    padding: 10px;
+}
+
+.infoWrap .infoItems {
+    float: left;
+    width: 528px;
+    line-height: 30px;
+}
+
+.infoItems .infoTit {
+    float: left;
+    width: 36px;
+    color: #666;
+    padding-right: 28px;
+}
+
+.priJXBox .infoPrijx {
+    color: #999;
+    font-family: "Microsoft YaHei";
+}
+
+.infoItems .infoCon {
+    float: left;
+    width: 464px;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+.priceBox .infoPri .pri {
+    color: #cc3333;
+    font-family: "Microsoft YaHei";
+}
+
+.priceBox .infoPri span {
+    display: inline-block;
+    height: 30px;
+}
+
+.priceBox .infoPri .pri em {
+    font-size: 14px;
+}
+
+.priceBox .infoPri .pri strong {
+    font-size: 26px;
+}
+
+.mobileBay {
+    width: 104px;
+    height: 26px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 1;
+}
+
+.mobileBay .mb-head {
+    width: 104px;
+    height: 26px;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0;
+    background: #fff;
+}
+
+.mobileBay .mb-head i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    background-position: -305px 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.mobileBay .mb-head span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 26px;
+    width: auto;
+    margin: 0;
+}
+
+.mobileBay .mb-head em {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 5px;
+    background-position: -122px -46px;
+    overflow: hidden;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.priceBox .infoPri .tim {
+    font-weight: bold;
+    color: #666;
+}
+
+.priceBox .infoPri .tim {
+    color: #333;
+    padding-left: 15px;
+}
+
+.priceBox .infoPri .tim i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-position: -120px -25px;
+    overflow: hidden;
+    margin: 8px 5px 0 0;
+}
+
+.priceBox .infoPri .tim i {
+    display: none;
+}
+
+.dIntro em,
+.dIntro i {
+    font-style: normal;
+}
+
 .dIcon {
     background: url(../images/d-icon.png) no-repeat 0 0;
+}
+
+.priceBox .infoPri .tim b {
+    color: #cc3333;
+    font-family: "Microsoft YaHei";
+    padding: 0 3px;
+    font-size: 14px;
+}
+
+b {
+    font-weight: bold;
+}
+
+.priceBox .infoPri .limitProduct {
+    color: #666;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 40px;
+}
+
+.clubDisc {
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+    float: left;
+    margin-left: 64px;
+    font-size: 0px;
+    font-family: 微软雅黑;
+}
+
+.clubDisc .clubImg {
+    background: url(../images/clubImg.jpg) no-repeat;
+    width: 37px;
+    height: 16px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.clubDisc span {
+    font-size: 12px;
+    color: #333;
+}
+
+.clubDisc a {
+    color: #3355aa;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.clubDisc span,
+.clubDisc .clubImg,
+.clubDisc a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clubDisc a i {
+    font-family: 宋体;
+    padding-left: 1px;
+    display: inline-block;
+}
+
+.dIntro em,
+.dIntro i {
+    font-style: normal;
+}
+
+.infoWrap .promotionBox {
+    margin-top: 10px;
+}
+
+.promotionBox .infoProm {
+    vertical-align: middle;
+    font-size: 0;
+    line-height: 32px;
+}
+
+.infoItems .infoCon {
+    float: left;
+    width: 464px;
+}
+
+.promotionBox .infoProm ul li .prom-h {
+    height: 16px;
+    line-height: 16px;
+    color: #fff;
+    background: #cc3333;
+    padding: 0 3px;
+    display: inline-block;
+}
+
+promotionBox .infoProm ul li .prom-n {
+    margin-left: 12px;
+    color: #333;
+    display: inline;
+}
+
+.promotionBox .infoProm ul li * {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.salesScoreGold {
+    border-bottom: 1px dotted #d6d6d6;
+}
+
+.salesScoreGold ul {
+    padding-left: 70px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.salesScoreGold ul li {
+    float: left;
+    width: 30%;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+salesScoreGold ul .comSales .ssg {
+    background-position: -194px 0;
+}
+
+.salesScoreGold ul li .ssg {
+    width: 15px;
+    height: 13px;
+    overflow: hidden;
+}
+
+.salesScoreGold ul li span {
+    color: #999;
+    margin: 0 8px 0 6px;
+}
+
+.salesScoreGold ul li em {
+    color: #999;
+    font-family: "Microsoft YaHei";
+}
+
+.salesScoreGold ul .comScore .ssg {
+    background-position: -214px 0;
+}
+
+
+.salesScoreGold ul .comGold .ssg {
+    background-position: -232px 1px;
+}
+
+.salesScoreGold ul li .point {
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    margin-left: 5px;
+    background-position: -251px -18px;
+}
+
+.infoWrap .infoItems.couponsEntrance {
+    margin: 6px 0 5px 0;
+    height: 19px;
+    line-height: 19px;
+}
+
+.infoItems .infoCon {
+    float: left;
+    width: 464px;
+}
+
+.infoCoupons {
+    height: 19px;
+}
+
+.jt-list {
+    float: left;
+    height: 19px;
+    color: #cc3333;
+    line-height: 19px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.jt-list .jxjt {
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 10px;
+    color: #fff;
+    background: url(http://misc.jiuxian.com/images/detail_v2.0/jxjt_bg.png) no-repeat 0 0;
+}
+
+.jt-list span em {
+    font-family: '宋体';
+    font-style: normal;
+    margin-left: 3px;
+}
+
+.cityBox {
+    margin: 6px 0 10px 0;
+}
+
+.cityBox .infoCity {
+    position: relative;
+    z-index: 2;
+}
+
+.infoItems .infoCon {
+    float: left;
+    width: 464px;
+}
+
+.cityBox .infoCity .citySelect {
+    position: relative;
+    z-index: 2;
+}
+
+.citySelect .dOrder-city-sel,
+.depit_citydrp,
+.buyNum input,
+.buyNum .buyNum-btn {
+    border: 1px solid #999;
+}
+
+.citySelect .dOrder-city-sel {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding-left: 6px;
+    position: relative;
+    z-index: 2;
+    font-size: 0;
+}
+
+.citySelect strong {
+    display: inline-block;
+    padding-left: 8px;
+}
+
+.citySelect .dOrder-city-sel b {
+    font-size: 12px;
+    color: #666;
+    font-weight: normal;
+    padding-right: 5px;
+}
+
+.citySelect .dOrder-city-sel i {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -139px -30px;
+}
+
+.citySelect * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.depit_citydrp {
+    width: 340px;
+    position: absolute;
+    left: 0;
+    top: 26px;
+    padding: 10px 10px 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ddd;
+    background: #fff;
+    z-index: 3;
+}
+
+.h5_dptctdrp {
+    margin-bottom: 8px;
+    line-height: 20px;
+    font-size: 100%;
+    font-weight: normal;
+    position: relative;
+    z-index: 22;
+}
+
+.h5_dptctdrp a {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    background-color: #fff;
+    color: #666;
+    text-decoration: none;
+}
+
+.h5_dptctdrp a em {
+    font-style: normal;
+    display: inline-block;
+}
+
+.h5_dptctdrp a i {
+    display: inline-block;
+    background-position: -384px -70px;
+    width: 6px;
+    height: 4px;
+    margin: 9px 0 0 5px;
+    overflow: hidden;
+}
+
+.dptctdrp_list2 {
+    padding: 5px;
+}
+
+.dptctdrp_list {
+    padding: 5px 4px;
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    z-index: 20;
+    margin-top: -9px;
+    border: 1px solid #fff;
+    border-top: 1px solid #cc0000;
+}
+
+.dptctdrp_list2 li {
+    width: 82px;
+}
+
+.dptctdrp_list li {
+    float: left;
+    line-height: 24px;
+    width: 110px;
+}
+
+.dptctdrp_list li a {
+    display: inline-block;
+    padding: 0 7px;
+}
+
+.chooseBox {
+    margin-bottom: 8px;
+}
+
+.bayNumBox {
+    margin-bottom: 28px;
+}
+
+.chooseBox .infoChoose,
+.chooseNumBox .infoChooseNum {
+    width: 464px;
+}
+
+.chooseBox .infoChoose a {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    width: auto !important;
+    height: 30px;
+    border: 1px solid #e5e5e5;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: relative;
+}
+
+.chooseBox .infoChoose .choItem {
+    float: left;
+    height: 32px;
+    padding: 0 10px 10px 0;
+    border: none;
+}
+
+.chooseBox .infoChoose .choItem.on a {
+    border: 1px solid #cc3333;
+    cursor: default;
+}
+
+.chooseBox .infoChoose .choItem {
+    float: left;
+    height: 32px;
+    padding: 0 10px 10px 0;
+    border: none;
+}
+
+.chooseBox .infoChoose a span {
+    margin: 0 5px 0 2px;
+    font-size: 12px;
+}
+
+.infoItems .infoCon {
+    float: left;
+    width: 464px;
+}
+
+.bayNumBox .infoBuyNum .buyNum {
+    float: left;
+    width: 66px;
+    height: 30px;
+    position: relative;
+}
+
+.citySelect .dOrder-city-sel,
+.depit_citydrp,
+.buyNum input,
+.buyNum .buyNum-btn {
+    border: 1px solid #999;
+}
+
+.buyNum input {
+    float: left;
+    width: 26px;
+    height: 28px;
+    line-height: 28px;
+    color: #666;
+    font-family: "Microsoft YaHei";
+    padding: 0 8px;
+    border: 1px solid #ccc;
+}
+
+.buyNum .buyNum-add {
+    background-position: -70px -25px;
+    top: 0;
+}
+
+.buyNum .buyNum-btn {
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    right: 0;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    display: block;
+}
+
+.buyNum .buyNum-reduce {
+    background-position: -70px -41px;
+    top: 17px;
+}
+
+.bayNumBox .infoBuyNum .buyPro {
+    float: left;
+    color: #cc3333;
+    margin-left: 12px;
+}
+
+.infoWrap .infoItems {
+    width: 528px;
+}
+
+.infoItems.bayBtnBox {
+    margin-bottom: 18px;
+    width: 587px;
+    overflow: hidden;
+    position: relative;
+}
+
+bayBtnBox .infoBuy {
+    width: 550px;
+    padding-left: 64px;
+}
+
+.infoItems .infoCon {
+    float: left;
+    width: 464px;
+}
+
+.bayBtnBox .infoBuy .buyBtn-cart {
+    border: 1px solid #ffcccc;
+    background: #cc3333;
+    color: #fff;
+}
+
+.bayBtnBox .infoBuy .buyBtn {
+    display: inline-block;
+    width: 166px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    margin-right: 12px;
+}
+
+.promptBox .infoPrompt li.noCoupons i {
+    background-position: -211px -38px;
+}
+
+.promptBox .infoPrompt li i {
+    background-position: -211px -21px;
+    width: 13px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.showBox {
+    width: 460px;
+    height: 312px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -156px 0 0 -230px;
+    background: #fff;
+    border: 6px solid #ccc;
+    display: none;
+    z-index: 1000;
+}
+
+.u-buy-close {
+    background-position: -230px -19px;
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.u-buy-con {
+    height: 262px;
+    padding: 30px 30px 20px;
+    box-shadow: 0px 0px 2px 0px #888;
+    overflow: hidden;
+}
+
+.u-buy-ok,
+.u-buy-no {
+    height: 28px;
+    line-height: 28px;
+    font-size: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.u-buy-ok i {
+    background-position: -201px -55px;
+}
+
+.u-buy-ok i,
+.u-buy-no i {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.u-buy-gon a {
+    display: inline-block;
+    width: 94px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.u-buy-ok span,
+.u-buy-no span {
+    height: 28px;
+    font-family: 微软雅黑;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.u-buy-con .u-buy-gon {
+    height: 34px;
+    padding: 11px 0px 19px;
+    text-align: center;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.u-buy-gon .u-buy-g {
+    background: #fbfbfb;
+    color: #666;
+    border: 1px solid #ddd;
+    margin-right: 12px;
+}
+
+.u-buy-gon .u-buy-go {
+    background: #cc3333;
+    color: #fff;
+    border: 1px solid #cc3333;
 }

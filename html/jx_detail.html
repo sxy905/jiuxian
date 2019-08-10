@@ -17,12 +17,184 @@
 </head>
 
 <body>
+    <div class="showBox">
+        <div class="u-buy-con">
+            <div class="u-buy-ok">
+                <i class="dIcon"></i>
+                <span>已成功加入购物车</span>
+            </div>
+            <div class="u-buy-gon">
+                <a name="detail_jixugouwu" class="u-buy-g" href="javascript:;">继续购物</a><a name="detail_chakangouwuche"
+                    class="u-buy-go" href="jx_carlist.html">查看购物车</a>
+            </div>
+        </div>
+        <a class="dIcon u-buy-close" href="javascript:;"></a>
+    </div>
     <div id="header">
         <include src="jx_header.html"></include>
     </div>
     <div id="main">
         <div class="content">
+            <div class="detail_box">
+                <p>首页>白酒> 习酒 ><span>53°习酒喜万家500ml</span></p>
+                <div class="dIntro">
+                    <div class="introShow"></div>
+                    <div class="introInfo">
+                        <div class="comName">
+                            <h1>
+                            </h1>
+                            <p></p>
+                        </div>
+                        <div class="infoWrap comSummary clearfix" id="price_and_promo">
+                            <div class="infoItems priJXBox">
+                                <div class="infoTit">酒仙价</div>
+                                <div class="infoCon infoPrijx"><del></del></div>
+                            </div>
+                            <div class="infoItems priceBox">
+                                <div class="infoTit"></div>
+                                <div class="infoCon infoPri" id="nowPrice"><span
+                                        class="pri"><em>￥</em><strong>49.00</strong></span><span class="tim"><i
+                                            class="dIcon"></i>剩余时间：<b class="hours">00</b>时<b class="minutes">32</b>分<b
+                                            class="seconds">08</b>秒</span><span class="limitProduct"></span></div>
+                                <div class="clubDisc"><i class="clubImg"></i><span>会员下单再享98折,可省0.98元</span><a
+                                        href="">开通会员<i>&gt;</i></a></div>
+                            </div>
+                            <div id="promotionInfo" class="infoItems promotionBox">
+                                <div class="infoTit">促　销</div>
+                                <div class="infoCon infoProm">
+                                    <ul>
+                                        <li class="promItem"><i class="prom-h" style="background:#ff0000">限时抢购</i><span
+                                                class="prom-n">限时抢购</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mobileBay" style="">
+                                <p class="mb-head"><i class="dIcon"></i><span>手 机 购 买</span><em class="dIcon"></em></p>
+                                <p class="mb-code"><img width="98" height="98"><span>手机购买优惠多</span></p>
+                            </div>
+                        </div>
+                        <div class="salesScoreGold">
+                            <ul>
+                                <li class="comSales"><i class="dIcon ssg"></i><span>累计销量</span><em>23238</em></li>
+                                <li class="comScore"><i class="dIcon ssg"></i><span>酒友评分</span><em>4.9</em></li>
+                                <li class="comGold"><i class="dIcon ssg"></i><span>送金币</span><em>24</em><a
+                                        class="dIcon point" target="_blank" href=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="infoWrap comChooseBay clearfix">
+                            <div class="infoItems couponsEntrance" id="allowance-info" style="">
+                                <div class="infoTit">津　贴</div>
+                                <div class="infoCon infoCoupons">
+                                    <div class="jt-list" id="allowance-tip"><i
+                                            class="jxjt">酒仙津贴</i>每满300减40,领取津贴全平台可用,<span>点击领取<em>&gt;&gt;</em></span>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="infoItems cityBox">
+                                <div class="infoTit">配送到</div>
+                                <div class="infoCon infoCity">
+                                    <div class="citySelect">
+                                        <a name="detail_dizhi" class="dOrder-city-sel" href="javascript:;"><b
+                                                pid="2">北京</b><b></b><b></b><i
+                                                class="dIcon"></i></a><strong>有货！</strong>
+                                    </div>
+                                    <span class="deliveryTime" id="presell_delivery_date" style="display: none">
+                                        <i class="dIcon"></i><em id="presell_delivery_date_em">预计2019年7月19号发货</em>
+                                    </span>
+                                    <div style="display:none;" class="depit_citydrp">
+                                        <h5 class="h5_dptctdrp">
+                                            <a href="javascript:;" pid="2"><em>北京</em><i></i></a><!-- 省 -->
+                                            <a href="javascript:;"><em>请选择市</em><i></i></a><!-- 市 -->
+                                            <a href="javascript:;"><em>请选择县/区</em><i></i></a><!-- 县 -->
+                                        </h5>
+                                        <ul class="dptctdrp_list dptctdrp_list2">
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="2">北京</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="3">安徽省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="4">福建省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="5">甘肃省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="6">广东省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="7">广西省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="8">贵州省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="9">海南省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="10">河北省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="11">河南省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="12">黑龙江省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="13">湖北省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="14">湖南省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="15">吉林省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="16">江苏省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="17">江西省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="18">辽宁省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="19">内蒙古省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="20">宁夏</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="21">青海省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="22">山东省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="23">山西省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="24">陕西省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="25">上海</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="26">四川省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="27">天津</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="28">西藏</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="29">新疆</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="30">云南省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="31">浙江省</a></li>
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="32">重庆</a></li>
+                                        </ul><!-- 省名 -->
+                                        <ul style="display: none;" class="dptctdrp_list">
+                                            <li style="padding:0px 0px;"><a href="javascript:;" pid="52">北京市</a></li>
+                                        </ul><!-- 省会名 -->
+                                        <ul style="display: none;" class="dptctdrp_list"></ul><!-- 县名 -->
+                                    </div>
+                                    <!-- 送货地址end -->
+                                </div>
+                            </div>
+                            <div class="infoItems chooseBox">
+                                <div class="infoTit">选　择</div>
+                                <div class="infoCon infoChoose">
+                                    <ul class="clearfix">
+                                        <li class="choItem on"><a href=""><img
+                                                    src="http://img10.jiuxian.com/2016/0921/c1ab3acf82f6420b8da42fcedc12eef12.jpg"
+                                                    width="30" height="30"
+                                                    title="53°习酒喜万家500ml"><span>53°习酒喜万家500ml</span><i
+                                                    class="dIcon"></i></a></li>
+                                        <li class="choItem"><a href=""><img
+                                                    src="http://img09.jiuxian.com/2018/0328/b558f15d5e8b40da9a098754d8e162892.jpg"
+                                                    width="30" height="30"
+                                                    title="53°习酒喜万家500ml（6瓶装）"><span>53°习酒喜万家500ml（6瓶装）</span><i
+                                                    class="dIcon"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="infoItems bayNumBox">
+                                <div class="infoTit">数　量</div>
+                                <div class="infoCon infoBuyNum">
+                                    <div class="buyNum"><input type="text" id="_nub" value="1" onkeyup="gv_renum();"><a
+                                            href="javascript:;" class="dIcon buyNum-btn buyNum-add"></a><a
+                                            href="javascript:;" class="dIcon buyNum-btn buyNum-reduce"></a></div>
+                                    <div class="buyPro">每购买2瓶，即赠送原厂手提袋1个</div>
+                                </div>
+                            </div>
+
+                            <div class="infoItems bayBtnBox">
+                                <div class="infoCon infoBuy" id="btnDetail">
+                                    <a name="detail_jiarugouwuche" id="addToCartForDetail" href="javascript:;"
+                                        class="buyBtn buyBtn-cart">加入购物车</a>
+                                </div>
+                            </div>
+                            <div class="infoItems promptBox">
+                                <div class="infoTit">提　示</div>
+                                <div class="infoCon infoPrompt">
+                                    <ul class="clearfix">
+                                        <li class="noCoupons"><i class="dIcon"></i><span>此商品不能使用优惠券</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
     <div id="footer">

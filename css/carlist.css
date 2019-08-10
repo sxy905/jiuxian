@@ -1,0 +1,876 @@
+.topHeaderWrap {
+    width: 100%;
+    height: 27px;
+    background: #f6f6f6;
+}
+
+.topHeader {
+    width: 1000px;
+    height: 27px;
+    line-height: 27px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 104;
+}
+
+.topCollect {
+    float: left;
+    height: 27px;
+    position: relative;
+    z-index: 100;
+    width: 400px;
+    overflow: hidden;
+}
+
+.topRight {
+    float: right;
+    height: 27px;
+    position: relative;
+}
+
+.topCollect ul li {
+    float: left;
+    margin-right: 5px;
+}
+
+.topRight li {
+    float: left;
+    height: 27px;
+    position: relative;
+    z-index: 9998;
+}
+
+.topRight li a {
+    padding: 0 3px;
+    float: left;
+}
+
+.topRight .hotTel {
+    padding-left: 5px;
+}
+
+.topRight li span {
+    float: left;
+}
+
+.topRight .hotTel strong {
+    color: #ca1926;
+    font-style: italic;
+    font-size: 16px;
+    position: relative;
+    top: 2px;
+    padding-left: 5px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.midHeader {
+    background: #fff;
+    height: 90px;
+    width: 100%;
+}
+
+.midHeaderBox {
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+    z-index: 102;
+}
+
+.jxwLogo {
+    float: left;
+    height: 63px;
+    margin-top: 20px;
+    width: 257px;
+}
+
+.bayProcess {
+    float: right;
+    margin-top: 25px;
+}
+
+.bayProcess .proPic {
+    width: 396px;
+    height: 27px;
+    background: url(../images/ch_icon.png) no-repeat;
+    margin: 0 26px 0 16px;
+}
+
+.bayProcess .proTex {
+    width: 438px;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 8px;
+}
+
+.jxwLogo .jxwIndex {
+    float: left;
+    width: 140px;
+}
+
+.jxwLogo .jxwIndex a {
+    display: block;
+    height: 63px;
+    width: 140px;
+}
+
+.bayProcess .proTex .on {
+    color: #666;
+}
+
+.bayProcess .proTex span {
+    color: #aaa;
+    margin-right: 117px;
+}
+
+.cartMain {
+    width: 1000px;
+    margin: 30px auto 0;
+    font-family: "微软雅黑";
+}
+
+.f-Prompt {
+    height: 34px;
+    line-height: 34px;
+    font-size: 0;
+    background: #fffcf8;
+    border: 1px solid #ffdeb0;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.f-Prompt i {
+    background-position: 0 -20px;
+    width: 13px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.f-Prompt i,
+.f-Prompt span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cartIcon {
+    background: url(../images/cartIcon.png) no-repeat 0 0;
+}
+
+.f-Prompt span {
+    font-size: 12px;
+    color: #666666;
+}
+
+.cart-t {
+    width: 100%;
+}
+
+.cart-filter-bar {
+    width: 100%;
+    height: 34px;
+}
+
+.my-cart-tit span {
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+}
+
+.my-cart-tit {
+    float: left;
+    font-weight: bolder;
+    color: #333;
+    font-size: 14px;
+    line-height: 34px;
+}
+
+.areaBox {
+    float: right;
+    position: relative;
+    height: 24px;
+    margin: 0px 0px 0px 10px;
+}
+
+.areaBox .selectArea {
+    color: #666;
+    position: relative;
+    line-height: 22px;
+    height: 22px;
+    font-size: 12px;
+    border: 1px solid #cacaca;
+    display: inline-block;
+    background: #fff;
+    padding-left: 12px;
+    z-index: 112;
+}
+
+.areaBox .selectArea b {
+    float: left;
+    font-weight: normal;
+    padding-right: 6px;
+    color: #666;
+}
+
+.areaBox .selectArea i {
+    float: left;
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    background-position: 0 0;
+    vertical-align: middle;
+    margin: 9px 5px 0 0;
+}
+
+.my-distri-addr {
+    float: right;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+}
+
+.save-cart-info {
+    float: right;
+    height: 24px;
+    line-height: 24px;
+    color: #666666;
+    margin-right: 30px;
+}
+
+.save-cart-info a {
+    color: #0066cc;
+    margin: 0 5px;
+}
+
+.cart-thead {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e8e8e8;
+}
+
+.cTab-tr {
+    float: left;
+    color: #999;
+    text-align: center;
+    min-height: 18px;
+}
+
+.cart-checkbox {
+    position: relative;
+    float: left;
+    margin: 0 0 0 20px;
+    _display: inline;
+    width: 24px;
+    height: 15px;
+}
+
+.cart-goods {
+    width: 300px;
+    float: left;
+    color: #999999;
+    text-indent: 93px;
+    text-align: left;
+}
+
+.cart-price {
+    width: 166px;
+}
+
+.cart-gold {
+    width: 114px;
+}
+
+.cart-quantity {
+    width: 132px;
+}
+
+.cart-subtotal {
+    width: 140px;
+}
+
+.cart-operating {
+    width: 102px;
+    text-align: left;
+}
+
+.cart-tbody {
+    margin-top: 12px;
+}
+
+.cart-shop {
+    border: 1px solid #fff;
+    height: 38px;
+    line-height: 38px;
+}
+
+.cart-checkbox label {
+    width: 24px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.cart-checkbox .checkbox-checked i {
+    background-position: -17px -58px;
+}
+
+.cart-checkbox i,
+.cart-checkbox span {
+    display: inline-block;
+}
+
+.cart-checkbox i {
+    width: 15px;
+    height: 15px;
+    background-position: 0 -58px;
+    margin-right: 10px;
+}
+
+.cart-checkbox input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+}
+
+.cart-gopay-left .checkbox-checked i {
+    background-position: -17px -58px;
+}
+.cart-gopay-left label {
+    font-size: 0;
+    margin-right: 30px;
+}
+.cart-gopay-left label, .cart-gopay-left a {
+    float: left;
+    line-height: 60px;
+}
+.cart-gopay-left label i {
+    width: 15px;
+    height: 15px;
+    background-position: 0 -58px;
+    margin-right: 10px;
+}
+
+.cart-gopay-left label i,
+.cart-gopay-left span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input,
+select {
+    vertical-align: middle;
+    outline: none;
+}
+
+.p-type {
+    margin-bottom: 10px;
+}
+
+.cart-gopay-left label input {
+    display: none;
+}
+
+.cart-checkbox .checkbox-checked i {
+    background-position: -17px -58px;
+}
+
+.cart-checkbox i,
+.cart-checkbox span {
+    display: inline-block;
+}
+
+.cart-checkbox i {
+    width: 15px;
+    height: 15px;
+    background-position: 0 -58px;
+    margin-right: 10px;
+}
+
+.shop-type {
+    float: left;
+    font-size: 0;
+}
+
+.shop-type .jxzy {
+    background-position: -72px 0;
+}
+
+.shop-type i,
+.shop-type span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.shop-type span {
+    font-size: 12px;
+    color: #333;
+}
+
+.voucher-btn-wrap,
+.voucher-btn-box {
+    width: 68px;
+    height: 29px;
+}
+
+.voucher-btn-box {
+    margin: 5px 0 0 14px;
+}
+
+.gifts-btn {
+    float: left;
+    height: 22px;
+    margin: 7px 0 0 14px;
+    _width: 90px;
+    position: relative;
+    z-index: 22;
+}
+
+.voucher-btn-wrap {
+    cursor: pointer;
+}
+
+.voucher-btn-wrap,
+.voucher-btn-box {
+    width: 68px;
+    height: 29px;
+}
+
+.cart-gifts-voucher-pop {
+    width: 398px;
+    top: 34px;
+}
+
+.cart-pub-pop {
+    width: 358px;
+    height: auto;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 0 6px #bcbfc1;
+    z-index: 22;
+    display: none;
+}
+
+.voucher-btn-wrap em {
+    background-position: -19px -209px;
+    width: 3px;
+    height: 29px;
+    overflow: hidden;
+    float: left;
+}
+
+.voucher-btn-shell {
+    margin-left: 3px;
+    height: 27px;
+    font-size: 0;
+    line-height: 27px;
+    border-top: 1px solid #ff999b;
+    border-bottom: 1px solid #ff999b;
+    border-right: 1px solid #ff999b;
+    background: #fff6f6;
+    text-align: center;
+}
+
+.voucher-btn-shell span {
+    font-size: 12px;
+    color: #ef2525;
+}
+
+.voucher-btn-shell span,
+.voucher-btn-shell i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.voucher-btn-shell i {
+    background-position: -26px -209px;
+    width: 10px;
+    height: 6px;
+    margin-left: 5px;
+}
+
+.voucher-btn-shell span,
+.voucher-btn-shell i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cart-postage {
+    float: right;
+    color: #666666;
+}
+
+.cart-postage span {
+    color: #e6393d;
+}
+
+.cart-postage {
+    float: right;
+    color: #666666;
+}
+
+.cart-list-wrap {
+    border-top: 2px solid #b7b7b7;
+    border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+}
+
+.select-bg {
+    background: #fffbf0;
+}
+
+.cart-list {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 20px 0;
+}
+
+.cart-checkbox .checkAllText {
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    left: 24px;
+    top: 0;
+    width: 50px;
+    text-align: left;
+}
+
+
+.cart-goods {
+    width: 300px;
+    float: left;
+    color: #999999;
+    text-indent: 93px;
+    text-align: left;
+}
+
+.goods-info {
+    width: 290px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.goods-img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    position: relative;
+}
+
+.goods-right {
+    margin-left: 90px;
+}
+
+.goods-info * {
+    text-indent: 0;
+}
+
+.goods-name {
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.cart-tag {
+    height: 18px;
+    margin-top: 5px;
+}
+
+.goods-name a {
+    color: #333;
+}
+
+.goods-name a .zhenxuan {
+    float: left;
+    width: 72px;
+    height: 16px;
+    margin: 1px 5px 0 0;
+}
+
+.cart-tag {
+    height: 18px;
+    margin-top: 5px;
+}
+
+.cart-tag span {
+    height: 16px;
+    line-height: 16px;
+    float: left;
+    border: 1px solid #e6393d;
+    padding: 0 4px;
+    color: #e6393d;
+    display: block;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.cart-price {
+    width: 166px;
+}
+
+.goods-price,
+.goods-gold,
+.goods-total-price {
+    color: #333;
+    height: 18px;
+    line-height: 18px;
+}
+
+.cart-gold {
+    width: 114px;
+}
+
+.goods-price,
+.goods-gold,
+.goods-total-price {
+    color: #333;
+    height: 18px;
+    line-height: 18px;
+}
+
+.cart-quantity {
+    width: 132px;
+}
+
+.goods-num {
+    width: 78px;
+    height: 20px;
+    border: 1px solid #d0d0d0;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+    top: -2px;
+}
+
+.cart-stock {
+    color: #e43a3d;
+    line-height: 20px;
+}
+
+.goods-num p {
+    float: left;
+    width: 18px;
+    height: 20px;
+}
+
+.goods-num .num {
+    width: 42px;
+    height: 20px;
+    display: block;
+    float: left;
+    border: none;
+    _border: 0;
+    line-height: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+
+.goods-num i.min {
+    background-position: -15px -74px;
+    border-right: 1px solid #d0d0d0;
+    cursor: not-allowed;
+}
+
+.goods-num i.cut {
+    background-position: -15px -94px;
+    border-right: 1px solid #d0d0d0;
+    cursor: pointer;
+}
+
+.goods-num p i {
+    display: block;
+    width: 17px;
+    height: 20px;
+}
+
+.goods-num i.add {
+    background-position: -34px -94px;
+    border-left: 1px solid #d0d0d0;
+    cursor: pointer;
+}
+
+.goods-num p i {
+    display: block;
+    width: 17px;
+    height: 20px;
+}
+
+.cart-subtotal {
+    width: 140px;
+}
+
+.goods-price,
+.goods-gold,
+.goods-total-price {
+    color: #333;
+    height: 18px;
+    line-height: 18px;
+}
+
+.cart-operating {
+    width: 102px;
+    _width: 101px;
+    text-align: left;
+}
+
+.goods-operating {
+    text-align: left;
+}
+
+.goods-operating p {
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.goods-operating p a,
+.goods-operating p a:hover {
+    color: #666;
+}
+
+.cart-gopay-bottom {
+    height: 60px;
+    background: #f8f8f8;
+    border: 1px solid #e8e8e8;
+    width: 978px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cart-gopay-left {
+    float: left;
+    height: 60px;
+}
+
+.cart-count {
+    float: right;
+    margin-right: 150px;
+    _display: inline;
+    padding: 5px 0;
+    height: 50px;
+}
+
+.cart-gopay-btn {
+    width: 120px;
+    height: 62px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    z-index: 100;
+}
+
+.cart-gopay-left label {
+    font-size: 0;
+    margin-right: 30px;
+}
+
+.cart-gopay-left label,
+.cart-gopay-left a {
+    float: left;
+    line-height: 60px;
+}
+
+
+.cart-gopay-left a,
+.cart-gopay-left a:hover {
+    color: #333;
+    margin-right: 20px;
+}
+
+.cart-gopay-left a:last-child {
+    margin-right: 0;
+}
+
+
+.cart-gopay-left label i {
+    width: 15px;
+    height: 15px;
+    background-position: 0 -58px;
+    margin-right: 10px;
+}
+
+.cart-gopay-left label i,
+.cart-gopay-left span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cart-gopay-left label span {
+    font-size: 12px;
+    color: #333;
+}
+
+.cart-gopay-left label i,
+.cart-gopay-left span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cart-count div {
+    text-align: right;
+    height: 25px;
+    line-height: 25px;
+}
+
+.cart-count div {
+    text-align: right;
+    height: 25px;
+    line-height: 25px;
+}
+
+.cart-count-offer {
+    color: #999;
+}
+
+.cart-count-total .pieces {
+    margin-right: 25px;
+}
+
+.cart-count-total span {
+    color: #333;
+}
+
+.cart-count-total .pieces em {
+    color: #e43a3d;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.cart-count-total span {
+    color: #333;
+}
+
+.cart-count-offer span {
+    margin-left: 20px;
+}
+
+.cart-count-offer em {
+    font-style: normal;
+}
+
+.cart-gopay-btn a.done {
+    background: #e43a3d;
+    display: none;
+}
+
+.cart-gopay-btn a {
+    display: block;
+    width: 120px;
+    height: 62px;
+    background: #d0d0d0;
+    color: #fff;
+    text-align: center;
+    line-height: 62px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}

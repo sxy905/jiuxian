@@ -41,6 +41,7 @@ class Jx_index {
         this.jx_floor = this.data.jx_floor;
         this.jx_floor_text = this.data.jx_floor_text;
         this.jx_adv_img = this.data.jx_adv_img;
+
     }
     init() {
         this.renderUI();
@@ -72,16 +73,28 @@ class Jx_index {
         new BannerManager(Array.from(this.jx_banner_r1), document.getElementsByClassName("banners1")[0], 10, false).init();
 
         new BannerManager(Array.from(this.jx_banner_r2), document.getElementsByClassName("banners2")[0], 10, false).init();
+        $(".ul_title").find("li").eq(0).addClass("on");
         $(".ul_title").on("mouseenter", "li", function () {
             let index = $(this).index();
-            // $(this).addClass("tab_hover").siblings().removeClass("tab_hover");
+            $(this).addClass("on").siblings().removeClass("on");
             $(".tab_box").children(".li_box").eq(index).css("display", "block").siblings().css("display", "none");
         })
 
-
+        $(".notice_ul").find("li").eq(0).addClass("on");
         $(".notice_ul").on("mouseenter", "li", function () {
             let index = $(this).index();
+            $(this).addClass("on").siblings().removeClass("on");
             $(".notice_box").children("ul").eq(index).css("display", "block").siblings().css("display", "none");
+        })
+
+        //跳到详情页
+        let self = this;
+        $(".tab_box").on("click", ".box1", function () {
+            let outer = $(".ul_title li[class='on']").index();
+            let inner = $(this).index();
+            let queryStr = self.obj2QueryString(self.jx_index_tab_box[outer][inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
         })
     }
     renderTab() {
@@ -187,7 +200,11 @@ class Jx_index {
                 $(".tab_slider_box").children(".tab_slider").eq(index - 1).css("display", "block").siblings().css("display", "none");
                 $(".dot").children("span").eq(index - 1).addClass("on").siblings().removeClass("on");
                 index--;
+                if (index < 0) {
+                    index = 0;
+                }
             }
+
         })
 
         $(".icon_gt").click(function () {
@@ -195,8 +212,25 @@ class Jx_index {
                 $(".tab_slider_box").children(".tab_slider").eq(index + 1).css("display", "block").siblings().css("display", "none");
                 $(".dot").children("span").eq(index + 1).addClass("on").siblings().removeClass("on");
                 index++;
+                if (index >= len) {
+                    index = len;
+                }
             }
         })
+
+        //跳到详情页
+        let self = this;
+        $(".tab_slider_box").on("click", ".slider_box", function () {
+            console.log($(".dot span [class='on']"));
+
+            let outer = $(".dot span[class='on']").index();
+            let inner = $(this).index();
+            console.log(outer, inner);
+            let queryStr = self.obj2QueryString(self.jx_recom_tab[outer][inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
+
     }
     //菜单  box  menu_item
     renderF1_F2(menu_title, f_box, left_info, f_menu_item, f_tab, classname = "", floor = "1F", floor_text = "白酒馆") {
@@ -289,6 +323,43 @@ class Jx_index {
             $(floor_className).find(".hot_img").children(".hot_box").eq(index).css("display", "block").siblings().css("display", "none");
         });
         new BannerManager(arr_banner, location_dom, point_size, num_t_f).init();
+
+        //跳到详情页
+        let self = this;
+        // F1box
+        $(".slider_1_right ").eq(0).on("click", ".slider_right_box", function () {
+            let inner = $(this).index();
+            let queryStr = self.obj2QueryString(self.jx_F1_box[inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
+
+        //F1tab
+        $(".hot_img").eq(0).on("click", ".hot_box_s", function () {
+            let outer = $(".hot_type a[class='on']").eq(0).index();
+            let inner = $(this).index();
+            console.log(outer, inner);
+            let queryStr = self.obj2QueryString(self.jx_F1_tab[outer][inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
+
+        // F2box
+        $(".slider_1_right").eq(1).on("click", ".slider_right_box", function () {
+            let inner = $(this).index();
+            let queryStr = self.obj2QueryString(self.jx_F2_box[inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
+        //f2tab
+        $(".hot_img").eq(1).on("click", ".hot_box_s", function () {
+            let outer = $(".hot_type a[class='on']").eq(1).index();
+            let inner = $(this).index();
+            console.log(outer, inner);
+            let queryStr = self.obj2QueryString(self.jx_F2_tab[outer][inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
     }
 
     renderF3(menu_title, f_box, left_info, classname = "", floor = "1F", floor_text = "白酒馆") {
@@ -341,6 +412,15 @@ class Jx_index {
         let F1 = $(`<div class="${classname}"></div>`);
         F1.html(`${top}`);
         $("main").append(F1);
+        //跳到详情页
+        let self = this;
+        // F3box
+        $(".slider_1_right ").eq(2).on("click", ".slider_right_box", function () {
+            let inner = $(this).index();
+            let queryStr = self.obj2QueryString(self.jx_F3_box[inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
     }
     renderF4_F5(menu_title, f_box, classname = "", floor = "1F", floor_text = "白酒馆") {
         let title = Array.from(menu_title).map((ele_title) => {
@@ -380,13 +460,22 @@ class Jx_index {
     }
 
     renderF3_F5_act(floor_className, arr_banner, location_dom, point_size, num_t_f) {
-        // $(floor_className).find(".hot_type").children("a").eq(0).addClass("on");
-        // $(floor_className).find(".hot_type").on("mouseenter", "a", function () {
-        //     let index = $(this).index();
-        //     $(this).addClass("on").siblings().removeClass("on");
-        //     $(floor_className).find(".hot_img").children(".hot_box").eq(index).css("display", "block").siblings().css("display", "none");
-        // });
         new BannerManager(arr_banner, location_dom, point_size, num_t_f).init();
+        
+        //跳到详情页
+        let self = this;
+        $(".slider_1_right ").eq(3).on("click", ".slider_right_box", function () {
+            let inner = $(this).index();
+            let queryStr = self.obj2QueryString(self.jx_F4_box[inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
+        $(".slider_1_right ").eq(4).on("click", ".slider_right_box", function () {
+            let inner = $(this).index();
+            let queryStr = self.obj2QueryString(self.jx_F5_box[inner]);
+            let str = "jx_detail.html?" + queryStr;
+            window.location.href = str;
+        })
     }
     renderlogo() {
         let lis = Array.from(this.jx_logo_recom).map((ele_lis) => {
@@ -484,6 +573,15 @@ class Jx_index {
         F1.html(`${html}`);
         $("main").append(F1);
     }
+
+    obj2QueryString(o) {
+        let queryString = "";
+        for (let key in o) {
+            queryString += "&" + `${key}=${o[key]}`;
+        }
+        return queryString.slice(1);
+    }
+
     // renderF1() {
     //     let title = Array.from(this.jx_F1_menu).map((ele_title) => {
     //         return `<a href="" class="line">${ele_title}</a>`;
@@ -581,6 +679,7 @@ class Jx_index {
 
     renderUI() {
         // this.renderBanner();
+        let self = this;
         this.renderTab();
         this.renderTab_act();
         this.renderlayerimg();
@@ -603,6 +702,8 @@ class Jx_index {
         this.renderlogo_act();
         this.renderstore();
         this.renderadv();
+        // this.showgoods();
+        // this.showArray(".hot_img",".hot_box_s",".hot_type a[class='on']",self.jx_F2_tab);
     }
     start() {
         this.init();

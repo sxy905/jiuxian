@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰店</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/goodlist.css">
+    <script src="../jq/jquery-3.4.1.js"></script>
+    <script src="../jq/include.js"></script>
+    <script src="../jq/index.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <include src="jx_header.html"></include>
+    </div>
+    <main>
+        <div class="layoutBox">
+            <img src="http://img07.jiuxian.com/brandlogo/2018/0525/5ac8a4127af74618916e47085d64a2eb.jpg" alt="">
+            <img src="http://img07.jiuxian.com/brandlogo/2018/0525/d637dd64453e463089a53a88a1b3e46c.jpg" alt="">
+            <img src="http://img06.jiuxian.com/brandlogo/2018/0525/779d5bffb7fa42b69e30e556fdec5b34.jpg" alt="">
+
+        </div>
+        <div class="good_baokuan">
+            <div class="good_content">
+            </div>
+        </div>
+        <div class="userBox">
+            <img alt="" src="http://img07.jiuxian.com/brandlogo/2018/0525/6da77159d34b4a038cd38a9c560ea359.jpg">
+        </div>
+        <div class="good_dapai">
+            <div class="good_content">
+            </div>
+        </div>
+        <div class="userBox">
+            <img alt="" src="http://img07.jiuxian.com/brandlogo/2018/0525/66faa1dfe0d94e6388289e598b2b7884.jpg">
+        </div>
+        <div class="good_tunhuo">
+            <div class="good_content">
+            </div>
+        </div>
+        <div class="userBox">
+            <img alt="" src="http://img09.jiuxian.com/brandlogo/2018/0525/3186baeb63734674a4fadc84f196787f.jpg">
+        </div>
+    </main>
+    <div id="footer">
+        <include src="jx_footer.html"></include>
+    </div>
+    <script>
+        $(function () {
+            let itemData=[];
+            let good_baokuan = $(".good_baokuan").children(".good_content");
+            let good_dapai = $(".good_dapai").children(".good_content");
+            let good_tunhuo = $(".good_tunhuo").children(".good_content");
+            $.ajax({
+                type: "get",
+                url: "../service/getgoodListData.php",
+                dataType: "json",
+                success: function (data) {
+                    itemData=data.data_a;                  
+                    let res_b = data.data_b.map((ele, index) => {
+                        return `${index % 4 == 0 ? '<ul class="clearfix">': ""}
+                                    <li class="good_item">
+                                        <div class="good_img">
+                                            <img src="${ele.src}" alt="">
+                                        </div>
+                                        <div class="good_info">
+                                            <p class="good_title">
+                                                <a href="">${ele.title}</a>
+                                            </p>
+                                            <p class="good_pro">${ele.pro}</p>
+                                            <p class="good_price">
+                                                <span style="display: block;">￥</span>
+                                                <em good_id=${ele.good_id}>${ele.price}</em>
+                                                <a href="javascript:;" class="sBayBut">立刻抢购</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                ${index % 4 == 3 ? '</ul>': ""}`;
+                    }).join("");
+                    good_baokuan.append(res_b);
+
+                    let res_d = data.data_d.map((ele, index) => {
+                        return `${index % 4 == 0 ? '<ul class="clearfix">': ""}
+                                    <li class="good_item">
+                                        <div class="good_img">
+                                            <img src="${ele.src}" alt="">
+                                        </div>
+                                        <div class="good_info">
+                                            <p class="good_title">
+                                                <a href="">${ele.title}</a>
+                                            </p>
+                                            <p class="good_pro">${ele.pro}</p>
+                                            <p class="good_price">
+                                                <span style="display: block;">￥</span>
+                                                <em good_id=${ele.good_id}>${ele.price}</em>
+                                                <a href="javascript:;" class="sBayBut">立刻抢购</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                ${index % 4 == 3 ? '</ul>': ""}`;
+                    }).join("");
+                    good_dapai.append(res_d);
+
+                    let res_t = data.data_t.map((ele, index) => {
+                        return `${index % 4 == 0 ? '<ul class="clearfix">': ""}
+                                    <li class="good_item">
+                                        <div class="good_img">
+                                            <img src="${ele.src}" alt="">
+                                        </div>
+                                        <div class="good_info">
+                                            <p class="good_title">
+                                                <a href="">${ele.title}</a>
+                                            </p>
+                                            <p class="good_pro">${ele.pro}</p>
+                                            <p class="good_price">
+                                                <span style="display: block;">￥</span>
+                                                <em good_id=${ele.good_id}>${ele.price}</em>
+                                                <a href="javascript:;" class="sBayBut">立刻抢购</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                ${index % 4 == 3 ? '</ul>': ""}`;
+                    }).join("");
+                    good_tunhuo.append(res_t);
+                }
+            })
+
+            $("main").on("click", ".sBayBut", function () {
+
+                let li = $(this).parents('.good_item');
+                let index = $('.good_item').index(li);
+                let queryStr = obj2QueryString(itemData[index]);
+                let str = "jx_detail.html?" + queryStr;
+                window.location.href = str;
+            })
+
+            function obj2QueryString(o) {
+                let queryString = "";
+                for (let key in o) {
+                    queryString += "&" + `${key}=${o[key]}`;
+                }
+                return queryString.slice(1);
+            }
+        })
+    </script>
+</body>
+
+</html>

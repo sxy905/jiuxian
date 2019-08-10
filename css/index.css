@@ -301,7 +301,7 @@ body {
     box-sizing: border-box;
 }
 
-.data_li .data_box .ul_title>li:hover {
+.data_li .data_box .ul_title .on {
     background-color: #fff;
     border-top: 2px solid #cc0000;
     box-sizing: border-box;
@@ -370,7 +370,7 @@ body {
     box-sizing: border-box;
 }
 
-.data_li .notice_ul>li:hover {
+.data_li .notice_ul .on {
     background-color: #fff;
     border-top: 2px solid #cc0000;
     box-sizing: border-box;
