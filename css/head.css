@@ -281,7 +281,7 @@
     text-align: center;
 }
 
-.nav_title>a {
+.nav_title .title_a >a {
     padding: 0 22px;
     color: #fff;
     font-size: 14px;

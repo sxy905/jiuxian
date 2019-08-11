@@ -167,7 +167,8 @@ $(function () {
                             Cookies.set("username", username_G, 30);
                             Cookies.set("password", passwordMd5, 30);
                         }
-                        window.location.href = "jx_index.html";
+                        let str=`username=${username_G}`;
+                        window.location.href = "jx_index.html?"+str;
                     } else {
                         alert(response.msg);
                     }

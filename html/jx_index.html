@@ -38,19 +38,41 @@
                 new Jx_index(data).start();
             })
 
-            $.ajax({
-                type: "get",
-                url: "../service/getAdv.php",
-                dataType: "json",
-                success: function (data) {                   
-                    itemDate=data.data_banner_1;
-                    console.log(Array.isArray(itemDate));
-                    
-                    let jx_banner_1=JSON.parse(data.data_banner_1[0].contents);  
-                    new BannerManager(jx_banner_1, document.getElementsByClassName("nav_content")[0], 20, true).init();
-                }
-            })
+            // $.ajax({
+            //     type: "get",
+            //     url: "../service/getAdv.php",
+            //     dataType: "json",
+            //     success: function (data) {
+            //         itemDate = data;
+            //     }
+            // })
+            // let jx_banner_1 = JSON.parse(data.data_banner_1[0].contents);
+            // let jx_banner_s = JSON.parse(data.data_banner_s[0].contents);
+            // let jx_banner_r1 = JSON.parse(data.data_banner_r1[0].contents);
+            // let jx_banner_r2 = JSON.parse(data.data_banner_r2[0].contents);
+            // let jx_banner_F1 = JSON.parse(data.data_banner_F1[0].contents);
+            // let jx_banner_F2 = JSON.parse(data.data_banner_F2[0].contents);
+            // let jx_banner_F3 = JSON.parse(data.data_banner_F3[0].contents);
+            // let jx_banner_F4 = JSON.parse(data.data_banner_F4[0].contents);
+            // let jx_banner_F5 = JSON.parse(data.data_banner_F5[0].contents);
+            // let jx_layer_img = JSON.parse(data.data_layer_img[0].contents);
+            // let jx_index_tab = JSON.parse(data.data_index_tab[0].contents);
+            // let jx_adv_tab = JSON.parse(data.data_adv_tab[0].contents);
+            // let jx_adv_tab_box = JSON.parse(data.data_adv_tab_box[0].contents);
+            // let jx_F1_menu = JSON.parse(data.data_F1_menu[0].contents);
+            // let jx_F2_menu = JSON.parse(data.data_F2_menu[0].contents);
+            // let jx_F3_menu = JSON.parse(data.data_F3_menu[0].contents);
+            // let jx_F4_menu = JSON.parse(data.data_F4_menu[0].contents);
+            // let jx_F5_menu = JSON.parse(data.data_F5_menu[0].contents);
+            // let jx_logo_recom = JSON.parse(data.data_logo_recom[0].contents);
+            // let jx_F1_tab_menu = JSON.parse(data.data_F1_tab_menu[0].contents);
+            // let jx_F2_tab_menu = JSON.parse(data.data_F2_tab_menu[0].contents);
+            // let jx_floor = JSON.parse(data.data_floor[0].contents);
+            // let jx_floor_text = JSON.parse(data.data_floor_text[0].contents);
+            // let jx_adv_img = JSON.parse(data.data_adv_img[0].contents);
+
         })
+
     </script>
 </body>
 

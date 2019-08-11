@@ -158,63 +158,40 @@ $(function () {
 
     $("#getMsg").click(function () {
         let next = $(this).next();
-        // msgCodeText = parseInt(Math.random() * 1000000);
-        msgCodeText = "123456"
+        msgCodeText = parseInt(Math.random() * 1000000);
+        // msgCodeText = "123456"
         let minute = 3;
         let text = $.trim($("#phone").val());;
+        if(text==""){
+            alert("请输入电话号码");
+        }
         if (text && regTelephone.test(text)) {
             next.css("display", "none");
             $(this).removeClass("t_form");
             next.removeClass("b_next_no_num");
             /* 发送网络请求：发短信 */
-
-            // $.ajax({
-            //     type: 'post',
-            //     url: 'http://route.showapi.com/28-2',
-            //     dataType: 'json',
-            //     data: {
-            //         "showapi_timestamp": formatterDateTime(),
-            //         "showapi_appid": '101615', //这里需要改成自己的appid
-            //         "showapi_sign": 'e21eb07617884449b2a734d328f6f162', //这里需要改成自己的应用的密钥secret
-            //         "mobile": text,
-            //         "content": `{"code":${msgCodeText},"minute":"3"`,
-            //         "comName": `时光有你有限公司`,
-            //         "big_msg": "",
-            //         "tNum": "T150606060601",
-            //     },
-            //     error: function (XmlHttpRequest, textStatus, errorThrown) {
-            //         alert("操作失败!");
-            //     },
-            //     success: function (result) {
-            //         console.log(result); //console变量在ie低版本下不能用
-            //         alert(result.showapi_res_code);
-            //     }
-            // });
-
-            // $.ajax({
-            //     type: 'post',
-            //     url: 'http://route.showapi.com/28-2',
-            //     dataType: 'json',
-            //     data: {
-            //         "showapi_timestamp": formatterDateTime(),
-            //         "showapi_appid": '101615', //这里需要改成自己的appid
-            //         "showapi_sign": 'e21eb07617884449b2a734d328f6f162', //这里需要改成自己的应用的密钥secret
-            //         "mobile": text,
-            //         "content": `code:${msgCodeText},用户:${text},company:时光有你有限公司 minute：${minute}`,
-            //         "tNum": "T150606060601",
-            //         "big_msg": ""
-            //     },
-
-            //     error: function (XmlHttpRequest, textStatus, errorThrown) {
-            //         alert("操作失败!");
-            //     },
-            //     success: function (result) {
-            //         console.log(result) //console变量在ie低版本下不能用
-            //         alert(result.showapi_res_code)
-            //     }
-            // });
-
-            console.log(typeof ($("#getMsg").attr("disabled")) == "undefined");
+            $.ajax({
+                type: 'post',
+                url: 'http://route.showapi.com/28-2',
+                dataType: 'json',
+                data: {
+                    "showapi_timestamp": formatterDateTime(),
+                    "showapi_appid": '101615', //这里需要改成自己的appid
+                    "showapi_sign": 'e21eb07617884449b2a734d328f6f162',  //这里需要改成自己的应用的密钥secret
+                    "content":`您好,${text},验证码是${msgCodeText}, 本次登录密码有效时间为[minute]分钟`,
+                    "title":"某某公司名称",
+                    "notiPhone":text
+                },
+            
+                error: function(XmlHttpRequest, textStatus, errorThrown) {
+                    alert("操作失败!");
+                },
+                success: function(result) {
+                    console.log(result) //console变量在ie低版本下不能用
+                    alert(result.showapi_res_code)
+                }
+            });
+            
 
             if (typeof ($("#getMsg").attr("disabled")) == "undefined") {
                 //不存在执行
@@ -345,7 +322,7 @@ $(function () {
     })
 
     $("#submit").click(function () {
-        let passwordMd5=md5(passwordA_G).slice(16);
+        let passwordMd5 = md5(passwordA_G).slice(16);
         if (flag && phone_G && code_G && passwordA_G && passwordB_G && msg_G && $(".t_form").length == 0) {
             $.ajax({
                 type: "post",

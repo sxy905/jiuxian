@@ -5,479 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰店</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/banner.css">
-    <link rel="stylesheet" href="../css/detail.css">
-    <link rel="stylesheet" href="../css/goodlist.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script src="../jq/jquery-3.4.1.js"></script>
+    <script src="../jq/banner.js"></script>
+    <script src="../jq/include.js"></script>
+    <script src="../jq/index.js"></script>
+    <script src="../jq/jx_index_render.js"></script>
 </head>
-<div class="introShow"></div>
 
 <body>
-    <!-- 
-    <div class="detail_box">
-        <p>首页>白酒> 习酒 ><span>53°习酒喜万家500ml</span></p>
-        <div class="dIntro">
-            <div class="introShow">
-                <div class="show-pic">
-                    <img src="" alt="">
-                </div>
-                <div class="show-list clearfix">
-                    <a class="show-list-prev" href="javascript:;"><i class="dIcon"></i></a>
-                    <div class="show-list-con">
-                        <ul class="clearfix">
-                            <li>
-                                <a href="">
-                                    <img src="" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a class="show-list-next" href="javascript:;"><i class="dIcon"></i></a>
-                </div>
-                <div class="showOther">
-                    <div class="goodsNo">商品编号：<span>010068004</span></div>
-                    <div class="sOtherRight">
-                        <div class="showCollect"><a><i class="dIcon"></i><span>收藏
-                                    （<em>0</em>）
-                                </span></a></div>
-                        <div class="showShare sShare-list"><i class="dIcon"></i><span>分享</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="introInfo">
-                <div class="comName">
-                    <h1>
-                        53°习酒喜万家500ml
-                    </h1>
-                    <p>习酒为幸福酿造</p>
-                </div>
-                <div class="infoWrap comSummary clearfix" id="price_and_promo">
-                    <div class="infoItems priJXBox">
-                        <div class="infoTit">酒仙价</div>
-                        <div class="infoCon infoPrijx"><del>￥108.00</del></div>
-                    </div>
-                    <div class="infoItems priceBox">
-                        <div class="infoTit">促销价</div>
-                        <div class="infoCon infoPri" id="nowPrice"><span
-                                class="pri"><em>￥</em><strong>49.00</strong></span><span class="tim" style=""><i
-                                    class="dIcon"></i>剩余时间：<b class="hours">00</b>时<b class="minutes">32</b>分<b
-                                    class="seconds">08</b>秒</span><span class="limitProduct"></span></div>
-                        <div class="clubDisc"><i class="clubImg"></i><span>会员下单再享98折,可省0.98元</span><a
-                                href="http://member.jiuxian.com/clubUser/index.htm">开通会员<i>&gt;</i></a></div>
-                    </div>
-                    <div id="promotionInfo" class="infoItems promotionBox" style="">
-                        <div class="infoTit">促　销</div>
-                        <div class="infoCon infoProm">
-                            <ul>
-                                <li class="promItem"><i class="prom-h" style="background:#ff0000">限时抢购</i><span
-                                        class="prom-n">限时抢购</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mobileBay" style="">
-                        <p class="mb-head"><i class="dIcon"></i><span>手 机 购 买</span><em class="dIcon"></em></p>
-                        <p class="mb-code"><img src="http://www.jiuxian.com/Scan/01006800430818.jpg" width="98"
-                                height="98"><span>手机购买优惠多</span></p>
-                    </div>
-                </div>
-                <div class="salesScoreGold">
-                    <ul>
-                        <li class="comSales"><i class="dIcon ssg"></i><span>累计销量</span><em>23238</em></li>
-                        <li class="comScore"><i class="dIcon ssg"></i><span>酒友评分</span><em>4.9</em></li>
-                        <li class="comGold"><i class="dIcon ssg"></i><span>送金币</span><em>24</em><a class="dIcon point"
-                                target="_blank" href="http://help.jiuxian.com/view-2-210.htm"></a></li>
-                    </ul>
-                </div>
-                <div class="infoWrap comChooseBay clearfix">
-                    <div class="infoItems couponsEntrance" id="allowance-info" style="">
-                        <div class="infoTit">津　贴</div>
-                        <div class="infoCon infoCoupons">
-                            <div class="jt-list" id="allowance-tip"><i
-                                    class="jxjt">酒仙津贴</i>每满300减40,领取津贴全平台可用,<span>点击领取<em>&gt;&gt;</em></span></div>
-                        </div>
-                    </div>
-
-                    <div class="infoItems cityBox">
-                        <div class="infoTit">配送到</div>
-                        <div class="infoCon infoCity">
-                            <div class="citySelect">
-                                <a name="detail_dizhi" class="dOrder-city-sel" href="javascript:;"><b
-                                        pid="2">北京</b><b></b><b></b><i class="dIcon"></i></a><strong>有货！</strong>
-                            </div>
-                            <span class="deliveryTime" id="presell_delivery_date" style="display: none">
-                                <i class="dIcon"></i><em id="presell_delivery_date_em">预计2019年7月19号发货</em>
-                            </span>
-                            
-                            <div style="display:none;" class="depit_citydrp">
-                                <h5 class="h5_dptctdrp">
-                                    <a href="javascript:;" pid="2"><em>北京</em><i></i></a>
-                                    <a href="javascript:;"><em>请选择市</em><i></i></a>
-                                    <a href="javascript:;"><em>请选择县/区</em><i></i></a>
-                                </h5>
-                                <ul class="dptctdrp_list dptctdrp_list2">
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="2">北京</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="3">安徽省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="4">福建省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="5">甘肃省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="6">广东省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="7">广西省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="8">贵州省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="9">海南省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="10">河北省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="11">河南省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="12">黑龙江省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="13">湖北省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="14">湖南省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="15">吉林省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="16">江苏省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="17">江西省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="18">辽宁省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="19">内蒙古省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="20">宁夏</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="21">青海省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="22">山东省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="23">山西省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="24">陕西省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="25">上海</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="26">四川省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="27">天津</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="28">西藏</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="29">新疆</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="30">云南省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="31">浙江省</a></li>
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="32">重庆</a></li>
-                                </ul>
-                                <ul style="display: none;" class="dptctdrp_list">
-                                    <li style="padding:0px 0px;"><a href="javascript:;" pid="52">北京市</a></li>
-                                </ul>
-                                <ul style="display: none;" class="dptctdrp_list"></ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="infoItems chooseBox">
-                        <div class="infoTit">选　择</div>
-                        <div class="infoCon infoChoose">
-                            <ul class="clearfix">
-                                <li class="choItem on"><a href="http://www.jiuxian.com/goods-30818.html"><img
-                                            src="http://img10.jiuxian.com/2016/0921/c1ab3acf82f6420b8da42fcedc12eef12.jpg"
-                                            width="30" height="30" title="53°习酒喜万家500ml"><span>53°习酒喜万家500ml</span><i
-                                            class="dIcon"></i></a></li>
-                                <li class="choItem"><a href="http://www.jiuxian.com/goods-66479.html"><img
-                                            src="http://img09.jiuxian.com/2018/0328/b558f15d5e8b40da9a098754d8e162892.jpg"
-                                            width="30" height="30"
-                                            title="53°习酒喜万家500ml（6瓶装）"><span>53°习酒喜万家500ml（6瓶装）</span><i
-                                            class="dIcon"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="infoItems bayNumBox">
-                        <div class="infoTit">数　量</div>
-                        <div class="infoCon infoBuyNum">
-                            <div class="buyNum"><input type="text" id="_nub" value="1" onkeyup="gv_renum();"><a
-                                    href="javascript:;" class="dIcon buyNum-btn buyNum-add"></a><a href="javascript:;"
-                                    class="dIcon buyNum-btn buyNum-reduce"></a></div>
-                            <div class="buyPro">每购买2瓶，即赠送原厂手提袋1个</div>
-                        </div>
-                    </div>
-
-                    <div class="infoItems bayBtnBox">
-                        <div class="infoCon infoBuy" id="btnDetail">
-                            <!-- <a id="buyNow" class="buyBtn buyBtn-bay loginNow" href="javascript:;" style="display:none">立即购买</a> 
-                            <a name="detail_jiarugouwuche" id="addToCartForDetail" href="javascript:;"
-                                class="buyBtn buyBtn-cart">加入购物车</a>
-                        </div>
-                    </div>
-                    <div class="infoItems promptBox">
-                        <div class="infoTit">提　示</div>
-                        <div class="infoCon infoPrompt">
-                            <ul class="clearfix">
-                                <li class="noCoupons"><i class="dIcon"></i><span>此商品不能使用优惠券</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="introOther"></div>
-        </div>
+    <div id="header">
+        <include src="jx_header.html"></include>
     </div>
-     -->
-    <!-- <div class="good_dapai">
-        <div class="good_content">
-            <ul class="clearfix">
-                <li class="good_item">
-                    <div class="good_img">
-                        <img src="http://img06.jiuxian.com/2018/0611/a1661d89fbd34299a7b4571251a31a84.jpg" alt="">
-                    </div>
-                    <div class="good_info">
-                        <p class="good_title">
-                            <a href="">53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣和顺）500ml（2015年）（6瓶装）</a>
-                        </p>
-                        <p class="good_pro">
-                            53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣
-                        </p>
-                        <p class="good_price">
-                            <span style="display: block;"></span>
-                            <em>52542</em>
-                            <a href="" class="sBayBut">立刻抢购</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="good_item">
-                    <div class="good_img">
-                        <img src="http://img06.jiuxian.com/2018/0611/a1661d89fbd34299a7b4571251a31a84.jpg" alt="">
-                    </div>
-                    <div class="good_info">
-                        <p class="good_title">
-                            <a href="">53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣和顺）500ml（2015年）（6瓶装）</a>
-                        </p>
-                        <p class="good_pro">
-                            53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣
-                        </p>
-                        <p class="good_price">
-                            <span style="display: block;"></span>
-                            <em>52542</em>
-                            <a href="" class="sBayBut">立刻抢购</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="good_item">
-                    <div class="good_img">
-                        <img src="http://img06.jiuxian.com/2018/0611/a1661d89fbd34299a7b4571251a31a84.jpg" alt="">
-                    </div>
-                    <div class="good_info">
-                        <p class="good_title">
-                            <a href="">53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣和顺）500ml（2015年）（6瓶装）</a>
-                        </p>
-                        <p class="good_pro">
-                            53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣
-                        </p>
-                        <p class="good_price">
-                            <span style="display: block;"></span>
-                            <em>52542</em>
-                            <a href="" class="sBayBut">立刻抢购</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="good_item">
-                    <div class="good_img">
-                        <img src="http://img06.jiuxian.com/2018/0611/a1661d89fbd34299a7b4571251a31a84.jpg" alt="">
-                    </div>
-                    <div class="good_info">
-                        <p class="good_title">
-                            <a href="">53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣和顺）500ml（2015年）（6瓶装）</a>
-                        </p>
-                        <p class="good_pro">
-                            53°郎酒·青花郎二十（20）500ml（6瓶装）+45°新郎酒（国沣
-                        </p>
-                        <p class="good_price">
-                            <span style="display: block;"></span>
-                            <em>52542</em>
-                            <a href="" class="sBayBut">立刻抢购</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2018/0918/543f0260324f48339bc1fbd19d335c1f.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">50°枝江大曲480ml（6瓶装）</a>↵ </p>↵ <p
-                            class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                                good_id=undefined>￥69.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            </ul>↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0909/ea98c8e58eb84d3d99ca86d063193e08.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">41°老榆林小北京•腰鼓（实惠装）500ml*6</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥99.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵
-            <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2016/0905/4a8b9400fb974823aebccd0f9155469b.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°习牌特曲丙申年纪念版 500ml（6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥768.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2016/1230/c6bdbab51b654fe29dd9a1a2d570be93.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a
-                                href="">智利整箱红酒智利干露.克拉克干红葡萄酒750ml（6瓶装）</a>↵ </p>↵ <p class="good_pro">智利直采名酒，干露酒庄出品</p>↵
-                        <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                                good_id=undefined>￥594.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>
-                ↵ </ul>↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0418/339ca36e5a5e4ad686eb6d37fb29c671.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">买一送一</a>↵ </p>↵ <p class="good_pro">
-                        ①限时4776元买一箱送一箱②15年基酒调制，酒质媲美飞天</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥4776.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/1016/20dd86a1657041aaad0b73fe80455b4f.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°茅台集团白金珍品纪念版礼盒500ml*4</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥149.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2018/1017/f5340df241f44fb180cf95ffe0e31008.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a
-                                href="">【老酒】45°西凤金窖500ml(2012-2013年）*6</a>↵ </p>↵ <p class="good_pro"></p>↵ <p
-                            class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                                good_id=undefined>￥354.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>
-                ↵ </ul>↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0227/4682bb202d1d4b6396798249805092a7.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">法国拉菲传说2016波尔多法定产区红葡萄酒750ml（6瓶装）</a>↵ </p>↵
-                    <p class="good_pro">波尔多法定产区红葡萄酒，赤霞珠、梅洛品种混酿更柔顺</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥388.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/1225/822c16fb70ab43c4b50d9da49a6d10bd.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°白水杜康一坛老酒1000ml（4瓶装）</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥198.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2017/0410/bf58be1ed5de45bb92a01a97e4315545.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">38°扳倒井青花瓷700ml（6瓶装）</a>↵ </p>↵
-                        <p class="good_pro">酒友品鉴力荐 物美价廉 低度浓香</p>↵ <p class="good_price">↵ <span
-                                style="display: block;">￥</span>↵ <em good_id=undefined>￥99.00</em>↵ <a href=""
-                                class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ </ul>↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2016/1111/b2b6fbc9a6434950a347e976aeea7f83.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°泸州老窖泸州原浆蓝色8 500ml（2014年）（6瓶装）</a>↵ </p>↵
-                    <p class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥354.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵
-            <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0930/fe5acb20393645638fa1617d0e72356d.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">法国整箱红酒香奈西拉干红葡萄酒750ml（6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥499.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2015/0902/160d8ee796a74178a9201526d759c214.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">42°牛栏山陈酿整箱装500ml*12瓶装</a>↵ </p>↵
-                        <p class="good_pro">牛栏山二锅头，地道北京味儿！热销好口粮，酒友热力推！</p>↵ <p class="good_price">↵ <span
-                                style="display: block;">￥</span>↵ <em good_id=undefined>￥159.00</em>↵ <a href=""
-                                class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ </ul>↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2019/0109/0328861b0a594d9aba86c4d7a6dd7e69.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°泸州老窖三人炫闻炫（尊享版）1000ml *6+52°泸州老窖三人炫100ml
-                            *3</a>↵ </p>↵ <p class="good_pro"></p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥828.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2017/0821/c9a26093fa214183ab348aab10c4edd8.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°酒鬼原浆酒500ml（6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro">文化酒鬼酒，和谐馥郁香</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥1194.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ <ul class="clearfix">↵ <li class="good_item">
-                    ↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2016/0630/d77eb484c67e4d908ee949727d82fa0d.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a
-                                href="">西班牙整箱红酒（原瓶进口）莫拉斯城堡干红葡萄酒750ml（12瓶）装+醒酒器*1+酒杯*2+酒刀*1</a>↵ </p>↵ <p
-                            class="good_pro">12瓶酒，送酒具大礼包，一次到位，省心套装</p>↵ <p class="good_price">↵ <span
-                                style="display: block;">￥</span>↵ <em good_id=undefined>￥399.00</em>↵ <a href=""
-                                class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ </ul>↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2017/0222/71112b375893420ba44f1940fb28c54c.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">50°古井醇香500ml(6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro">实惠口粮酒，相信品牌品质</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥99.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2017/0809/696acb7383c84f53a47ed10aa2f9692e.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°五粮液股份公司出品一尊天下（优品）500ml(6瓶装)</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥594.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2019/0314/42869dc5bd00460db3622de117f2469b.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">【清仓】52°泸州老窖泸州原浆蓝色8
-                                500ml（2014年）（6瓶装）</a>↵ </p>↵ <p class="good_pro"></p>↵ <p class="good_price">↵ <span
-                                style="display: block;">￥</span>↵ <em good_id=undefined>￥354.00</em>↵ <a href=""
-                                class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ </ul>↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0224/ffef0e6533c745a290983c1d8fe2f69a.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">法国(原瓶进口)法圣古堡圣威骑士干红葡萄酒750ml(6瓶装)</a>↵ </p>↵
-                    <p class="good_pro">法国原装进口,热销爆款,补货归来</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥99.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2017/0711/b27dd199854e457a90ba56e2548dd5e6.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">50°古井贡酒原浆献礼版500ml(6瓶装)</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥948.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2018/1019/a3cc6b2d398c4943a0fd5962c818d7c1.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">45°西凤小凤酒（精制）500ml（6瓶装）</a>↵ </p>
-                        ↵ <p class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                                good_id=undefined>￥269.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>
-                ↵ </ul>↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2017/1116/b53eaf14596a466c9f79d2fa2b3623e5.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°酒鬼酒珍藏特酿500ml（6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥1374.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵
-            <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0130/33a85e8f5c784f47b8c272c0660b8904.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">澳洲整箱红酒澳大利亚奔富洛神山庄赤霞珠红葡萄酒750ml（6瓶装）</a>↵ </p>↵
-                    <p class="good_pro">奔富酒庄出品，值得信赖！</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥238.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ <ul class="clearfix">↵ <li class="good_item">
-                    ↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2016/1226/750a0ad368204994aec80bd822daad61.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">42°兰陵特酿450ml（6瓶装）</a>↵ </p>↵ <p
-                            class="good_pro">①优质特酿，实惠口粮装，酒友力荐；②山东名酒，酒质柔顺，好下口，不刺喉</p>↵ <p class="good_price">↵ <span
-                                style="display: block;">￥</span>↵ <em good_id=undefined>￥288.00</em>↵ <a href=""
-                                class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ </ul>↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2019/0311/832899553f0e453dab9008205aa0c5a6.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">54°董酒（畅享版）500ml（6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro">包装升级，国密品质，值得拥有！</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥899.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2019/0126/e0fd62a0fa3f43a2be75bfbd0626588e.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">50°沱牌大曲·陈窖（6）500ml （6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥294.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2017/0612/5d66014377b549a585718cf1a6d3a871.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">西班牙拉伊尔半甜白葡萄酒750ml (6瓶装)</a>↵
-                        </p>↵ <p class="good_pro">西班牙半甜白，7℃--10℃饮用效果更佳，柑橘类水果香气</p>↵ <p class="good_price">↵ <span
-                                style="display: block;">￥</span>↵ <em good_id=undefined>￥149.00</em>↵ <a href=""
-                                class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ </ul>↵ <li class="good_item">↵ <div
-                    class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0124/cc5f583ba8c645bdae84ab11bb3ddb34.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">52°泸州老窖双喜酒K6（2017款）500ml(6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥234.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵ ↵
-            <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/0929/b1be3a20f62e48a0b039a67d9180a93a.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">53°汾酒集团青瓷一坛香1500ml（双瓶装）</a>↵ </p>↵ <p
-                        class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                            good_id=undefined>￥258.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
-            <ul class="clearfix">↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                            src="http://img06.jiuxian.com/2018/0907/db3afbc2672e4a66b54f5de9dfbb3a08.jpg" alt="">↵
-                    </div>↵ <div class="good_info">↵ <p class="good_title">↵ <a href="">52°泸州老窖泸州特酿500ml*6</a>↵ </p>↵ <p
-                            class="good_pro"></p>↵ <p class="good_price">↵ <span style="display: block;">￥</span>↵ <em
-                                good_id=undefined>￥387.00</em>↵ <a href="" class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>
-                ↵ </ul>↵ <li class="good_item">↵ <div class="good_img">↵ <img
-                        src="http://img06.jiuxian.com/2018/1010/b14ca74982384016954feef97cfd5eff.jpg" alt="">↵ </div>↵
-                <div class="good_info">↵ <p class="good_title">↵ <a href="">法国整箱红酒茉莉花超级波尔多干红葡萄酒750ml（6瓶装）</a>↵ </p>↵ <p
-                        class="good_pro">法国超级波尔多，海外直采，CVB集团鼎力之作</p>↵ <p class="good_price">↵ <span
-                            style="display: block;">￥</span>↵ <em good_id=undefined>￥489.00</em>↵ <a href=""
-                            class="sBayBut">立刻抢购</a>↵ </p>↵ </div>↵ </li>↵
+    <main>
+        <div class="nav_content">
+            <!-- <div class="nav_content_box"></div> -->
         </div>
-    </div> -->
-    <!-- <div class="showBox">
-        <div class="u-buy-con">
-            <div class="u-buy-ok">
-                    <i class="dIcon"></i>
-                    <span>已成功加入购物车</span>
-            </div>
-            <div class="u-buy-gon">
-                    <a name="detail_jixugouwu" class="u-buy-g" href="javascript:;">继续购物</a><a name="detail_chakangouwuche" class="u-buy-go" href="">查看购物车</a>
-                </div>
-        </div>
-    </div> -->
+    </main>
+    <div id="footer">
+        <include src="jx_footer.html"></include>
+    </div>
     <script>
-    
-    </script>
+        $(function () {
+            let itemDate;
+            $.ajax({
+                async: false, //已经是同步请求了
+                type: "get",
+                url: "../service/getAdv.php",
+                dataType: "json",
+                success: function (data) {
+                    itemDate = data;
+                    // console.log(itemDate.data_banner_1[0].contents);
 
+                }
+            })
+            console.log(itemDate);
+
+            let jx_banner_1 = JSON.parse(itemDate.data_banner_1[0].contents);
+            let jx_banner_s = JSON.parse(itemDate.data_banner_s[0].contents);
+            let jx_banner_r1 = JSON.parse(itemDate.data_banner_r1[0].contents);
+            let jx_banner_r2 = JSON.parse(itemDate.data_banner_r2[0].contents);
+            let jx_banner_F1 = JSON.parse(itemDate.data_banner_F1[0].contents);
+            let jx_banner_F2 = JSON.parse(itemDate.data_banner_F2[0].contents);
+            let jx_banner_F3 = JSON.parse(itemDate.data_banner_F3[0].contents);
+            let jx_banner_F4 = JSON.parse(itemDate.data_banner_F4[0].contents);
+            let jx_banner_F5 = JSON.parse(itemDate.data_banner_F5[0].contents);
+            let jx_layer_img = JSON.parse(itemDate.data_layer_img[0].contents);
+            let jx_index_tab = JSON.parse(itemDate.data_index_tab[0].contents);
+            let jx_adv_tab = JSON.parse(itemDate.data_adv_tab[0].contents);
+            let jx_adv_tab_box = JSON.parse(itemDate.data_adv_tab_box[0].contents);
+            let jx_F1_menu = JSON.parse(itemDate.data_F1_menu[0].contents);
+            let jx_F2_menu = JSON.parse(itemDate.data_F2_menu[0].contents);
+            let jx_F3_menu = JSON.parse(itemDate.data_F3_menu[0].contents);
+            let jx_F4_menu = JSON.parse(itemDate.data_F4_menu[0].contents);
+            let jx_F5_menu = JSON.parse(itemDate.data_F5_menu[0].contents);
+            let jx_logo_recom = JSON.parse(itemDate.data_logo_recom[0].contents);
+            let jx_F1_tab_menu = JSON.parse(itemDate.data_F1_tab_menu[0].contents);
+            let jx_F2_tab_menu = JSON.parse(itemDate.data_F2_tab_menu[0].contents);
+            let jx_floor = JSON.parse(itemDate.data_floor[0].contents);
+            let jx_floor_text = JSON.parse(itemDate.data_floor_text[0].contents);
+            let jx_adv_img = JSON.parse(itemDate.data_adv_img[0].contents);
+            renderBanner();
+
+            function renderBanner() {
+                new BannerManager(jx_banner_1, document.getElementsByClassName("nav_content")[
+                    0], 20, true).init();
+
+                let html = '<div class="nav_img_box">';
+                jx_banner_s.forEach((ele, index) => {
+                    if ((index) % 3 == 0) {
+                        html += `<div class="nav_box">  
+                        <img src="${ele.goodsSrc}" alt="">`;
+                    } else {
+                        if ((index + 1) % 3 == 0) {
+                            html += `<img src="${ele.goodsSrc}" alt=""></div>`;
+                        } else {
+                            html += `<img src="${ele.goodsSrc}" alt="">`;
+                        }
+                    }
+                })
+                $(".nav_content_box").html(html);
+            }
+
+            function renderTab() {
+                let res_tab = jx_index_tab.map((eletab) => {
+                    return `<li>${eletab}</li>`;
+                }).join("");
+                res_tab = `<ul class="clearfix ul_title">${res_tab}</ul>`;
+
+                let res_box = Array.from(this.jx_index_tab_box).map((elebox) => {
+                    let box = `<div class="li_box clearfix">`;
+                    let box_index = Array.from(elebox).map((ele_index) => {
+                        return `<div class="box1 fl">
+                            <img src="${ele_index.src}" alt="">
+                            <div class="sigleline">
+                                
+                                <a>${ele_index.des}</a>
+                            </div>
+                            <span>${ele_index.price}</span>
+                        </div>`;
+                    }).join("");
+                    return `${box}${box_index}</div>`
+                }).join("");
+                res_box = `<div class="tab_box">${res_box}</div>`
+                let left = `<div class="fl data_box">${res_tab}${res_box}</div>`
+
+                let adv_tab = Array.from(this.jx_adv_tab).map((ele_adv_tab) => {
+                    return `<li>${ele_adv_tab}</li>`;
+                }).join("");
+                adv_tab = `<ul class="notice_ul">${adv_tab}</ul>`
+
+                let adv_ul = Array.from(this.jx_adv_tab_box).map((ele_adv_ul) => {
+                    let adv_text = Array.from(ele_adv_ul).map((ele_adv_text) => {
+                        return `<li class="sigleline"><a href="">${ele_adv_text}</a></li>`;
+                    }).join("");
+                    adv_text = `<ul>${adv_text}</ul>`;
+                    return adv_text;
+                }).join("");
+                adv_ul = `<div class="notice_box">${adv_ul}</div>`;
+
+                let banners1 = '<div class="banners1"></div>';
+
+                let banners2 = '<div class="banners2"></div>';
+
+                let right = `<div class="fr">${adv_tab}${adv_ul}${banners1}${banners2}`;
+
+                let index_tab = $('<div class="data_li clearfix"></div>');
+
+                index_tab.html(`<div class="content clearfix">${left}${right}</div>`);
+                $("main").append(index_tab);
+            }
+        })
+    </script>
 </body>
 
 </html>

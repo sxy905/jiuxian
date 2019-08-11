@@ -17,7 +17,8 @@ $(function () {
         function renderleft() {
             let big_box = `<div class="show-pic">
                                 <img src="${src}" alt="">
-                            </div>`;
+                            </div>
+                            <div class="move-view"></div>`;
 
             let ul_box = "";
             if (typeof (lis_ID) != "undefined") { //有id就搜索json数据库
@@ -46,6 +47,7 @@ $(function () {
                                     </div>
                                     <a class="show-list-next" href="javascript:;"><i class="dIcon"></i></a>
                                 </div>
+                                <div class="magnifier-view"></div>
                                 <div class="showOther">
                                     <div class="goodsNo">商品编号：<span>010068004</span></div>
                                     <div class="sOtherRight">
@@ -71,7 +73,7 @@ $(function () {
         let des = obj.des;
         let goodid = obj.goodid;
         let product_id = "";
-        
+
         $(".comName").children("h1").text(title);
         $(".infoPri").find("strong").text(price);
         if (obj.hasOwnProperty('product_id')) {
@@ -82,7 +84,7 @@ $(function () {
 
         $("#addToCartForDetail").click(function () {
             let num = $("#_nub").val();
-            $.ajax({  
+            $.ajax({
                 type: "get",
                 url: "../service/addCart.php",
                 data: `goodid=${goodid}&price=${price}&src=${src}&num=${num}`,
@@ -116,5 +118,13 @@ $(function () {
             }
         })
 
+        var magnifierConfig = {
+            magnifier: "#magnifier1", //最外层的大容器
+            width: 440, //承载容器宽
+            height: 580, //承载容器高
+            moveWidth: null, //如果设置了移动盒子的宽度，则不计算缩放比例
+            zoom: 2 //缩放比例
+        };
+        var _magnifier = magnifier(magnifierConfig);
     })
 })

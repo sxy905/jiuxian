@@ -81,10 +81,6 @@
                 })
             }
         }
-        // window.onload = function() {
-        // 	new Include39485748323().replaceIncludeElements();
-        // }
-
     document.addEventListener("DOMContentLoaded", function() {
         new Include39485748323().replaceIncludeElements();
     });

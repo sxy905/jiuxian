@@ -4,6 +4,28 @@
     padding-top: 10px;
 }
 
+.move-view {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.magnifier-view {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -105%;
+    top: 0;
+    z-index: 9999;
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+}
+
+.magnifier-view img {
+    display: block;
+}
+
 .ine_img>img {
     height: 7px;
     width: 100%;
